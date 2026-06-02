@@ -4,163 +4,322 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>いやしのおうち｜大阪の障がい者グループホーム</title>
-<meta name="description" content="大阪府内の障がい者グループホーム「いやしのおうち」。知的・発達障害の方向け。全室個室・24時間サポート体制。見学受付中。">
+<meta name="description" content="大阪府内の障がい者グループホーム「いやしのおうち」。知的・発達障害の方向け。全室個室・あたたかな手づくり食事・安心の支援体制。見学・ご相談受付中。">
 <meta property="og:title" content="いやしのおうち｜大阪の障がい者グループホーム">
 <meta property="og:description" content="大阪府内の障がい者グループホーム。知的・発達障害の方向け。見学受付中。">
 <meta property="og:type" content="website">
+<meta name="format-detection" content="telephone=no">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@500&family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ヘッダー -->
-<header class="header">
-  <a href="index.html" class="header-logo">いやしのおうち<span class="sub">障がい者グループホーム</span></a>
-  <nav class="header-nav" id="nav">
-    <a href="about.html">ホームのご案内</a>
-    <a href="day.html">1日の流れ</a>
-    <a href="use.html">ご入居・費用</a>
-    <a href="recruit.html">採用情報</a>
-    <a href="contact.html" class="btn-contact">お問い合わせ</a>
+<!-- ============ PCヘッダー（2段構成・ロゴ中央） ============ -->
+<header class="gh-header">
+  <div class="gh-header-top">
+    <div class="header-vacancy">
+      <div class="date">06/02<span>現在</span></div>
+      <div>
+        <div class="label">お部屋空き状況</div>
+        <div class="status">お問い合わせください</div>
+      </div>
+    </div>
+    <div class="header-tel">
+      <a href="tel:0000000000">XXX-XXXX-XXXX</a>
+      <p>9:00-17:00（平日のみ）</p>
+    </div>
+  </div>
+  <nav class="gh-nav">
+    <a href="#facility"><span class="nav-ic">🏠</span>施設紹介</a>
+    <a href="#guidance"><span class="nav-ic">📋</span>入居のご案内</a>
+    <a href="#faq"><span class="nav-ic">❓</span>よくあるご質問</a>
+    <a href="#top" class="gh-logo">いやしのおうち<span class="sub">障がい者グループホーム</span></a>
+    <a href="#company"><span class="nav-ic">🏢</span>運営会社</a>
+    <a href="#recruit"><span class="nav-ic">👥</span>求人情報</a>
+    <a href="contact.html"><span class="nav-ic">✉</span>お問い合わせ</a>
   </nav>
-  <button class="hamburger" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
 </header>
 
-<!-- ヒーローセクション -->
-<section class="hero">
-  <div class="hero-grid">
-    <div>
-      <h1 class="hero-catch">ここが、<br>あなたの「おうち」になる。</h1>
-      <p class="hero-sub">知的障害・発達障害のある方が、自分らしく安心して暮らせる場所。<br>大阪府内に開設予定の、あたたかなグループホームです。</p>
-      <div class="btn-row">
-        <a href="tel:0000000000" class="btn btn-primary">☎ お電話でのご相談</a>
-        <a href="contact.html" class="btn btn-outline">✉ お問い合わせフォーム</a>
-        <a href="#" class="btn btn-line">💬 LINEで相談</a>
-      </div>
+<!-- ============ スマホヘッダー ============ -->
+<header class="gh-header-sp">
+  <a href="tel:0000000000" class="sp-tel">☎ 電話する</a>
+  <div class="sp-logo">いやしのおうち<span class="sub">障がい者グループホーム</span></div>
+  <button class="gh-hamburger" onclick="document.getElementById('spmenu').classList.toggle('open')">☰</button>
+</header>
+<nav class="gh-spmenu" id="spmenu">
+  <a href="#top">ホーム</a>
+  <a href="#facility">施設紹介</a>
+  <a href="#guidance">入居のご案内</a>
+  <a href="#faq">よくあるご質問</a>
+  <a href="#company">運営会社</a>
+  <a href="#recruit">求人情報</a>
+  <a href="contact.html">お問い合わせ</a>
+</nav>
+
+<!-- ============ トップ背景画像 ============ -->
+<section class="hero-fullscreen" id="top">
+  <div class="hero-fullscreen-inner">
+    <h1 class="hero-catch">ここが、<br>あなたの「おうち」になる。</h1>
+    <p class="hero-sub">知的障害・発達障害のある方が、自分らしく安心して暮らせる場所。<br>大阪府内の、あたたかなグループホームです。</p>
+    <div class="btn-row">
+      <a href="tel:0000000000" class="btn btn-primary">☎ お電話でのご相談</a>
+      <a href="contact.html" class="btn btn-outline" style="color:#fff;border-color:#fff;">✉ お問い合わせ</a>
     </div>
-    <div class="hero-image">メインビジュアル写真をここに</div>
   </div>
+  <div class="hero-scroll">▼ SCROLL</div>
 </section>
 
-<!-- 開設予告帯 -->
-<div class="announce-bar">
-  🌿 大阪府内にて開設準備中 ── 見学・ご相談のご予約を受け付けております
-</div>
-
-<!-- 困っていませんかセクション -->
-<section class="section concern-section">
+<!-- ============ 動画でのご紹介 ============ -->
+<section class="section bg-emerald">
   <div class="container">
-    <h2 class="concern-title">ご自身やご家族のことで、困っていませんか？</h2>
-    <div class="concern-grid">
-      <div class="concern-card">
-        <span class="concern-badge person">ご本人</span>
-        <ul class="concern-list">
-          <li>一人暮らしをする自信がない…</li>
-          <li>親元を離れて自立してみたい…</li>
-          <li>支援してくれる人がそばにいると安心なんだけど…</li>
-          <li>今の生活を変えたいけど、どこに相談すればいいかわからない…</li>
-        </ul>
-      </div>
-      <div class="concern-card">
-        <span class="concern-badge family">ご家族</span>
-        <ul class="concern-list">
-          <li>自分たちが高齢になったとき、この子はどうなるんだろう…</li>
-          <li>安心して任せられる場所に暮らしてほしい…</li>
-          <li>子どもに友達や仲間を作ってほしい…</li>
-          <li>手厚いサポートがないと不安で、なかなか決断できない…</li>
-        </ul>
-      </div>
-    </div>
-    <div class="concern-resolve">
-      <p class="main">ぜひ、いやしのおうちにご相談ください！</p>
-      <p class="sub">地域で、自分らしく暮らすために。<br>必要なサポートを、ていねいにご提供します。</p>
+    <div class="sec-ttl fade-up"><h2>動画でのご紹介<span class="en">MOVIE</span></h2></div>
+    <div class="video-wrap fade-up">
+      <div class="video-placeholder">ホーム紹介動画をここに（video/iyashinouchi.mp4）</div>
     </div>
   </div>
 </section>
 
-<!-- 特徴4項目 -->
-<section class="section">
+<!-- ============ 施設紹介 ============ -->
+<section class="section bg-white" id="facility">
   <div class="container">
-    <h2 style="text-align:center;">いやしのおうちの特徴</h2>
-    <div class="features-grid" style="margin-top:40px;">
-      <div class="feature-card">
-        <div class="feature-icon">🌳</div>
-        <h3>木のぬくもりを感じるアットホームな空間</h3>
-        <p>施設らしさをなくした、温かみのあるリビング・ダイニング。「家に帰ってきた」と思える空間づくりにこだわっています。</p>
+    <div class="sec-ttl fade-up"><h2>施設紹介<span class="en">FACILITY</span></h2></div>
+
+    <div class="facility-gallery fade-up">
+      <div class="main-photo">
+        <div class="photo-ph">お部屋（個室）の写真</div>
+        <span class="photo-label">お部屋</span>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">💗</div>
-        <h3>一人ひとりに合わせた個別支援</h3>
-        <p>サービス管理責任者が作成する個別支援計画をもとに、本人のペース・生活リズムを最優先にしたサポートをおこないます。</p>
+      <div class="sub-col">
+        <div class="sub-photo">
+          <div class="photo-ph">エントランスの写真</div>
+          <span class="photo-label">エントランス</span>
+        </div>
+        <div class="sub-photo">
+          <div class="photo-ph">相談室の写真</div>
+          <span class="photo-label">相談室</span>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🌙</div>
-        <h3>夜間も安心のサポート体制</h3>
-        <p>夜間帯も世話人・生活支援員が対応。緊急時にも迅速に動ける体制を整えており、ご本人・ご家族ともに安心していただけます。</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🍚</div>
-        <h3>あたたかで栄養たっぷりの手料理</h3>
-        <p>世話人による手づくりの食事を毎日提供。食べることの楽しさ・季節感を大切にした、体にやさしい献立を心がけています。</p>
+    </div>
+
+    <div class="about-box fade-up">
+      <h3>「いやしのおうち」とは</h3>
+      <p>「いやしのおうち」は、知的障害・発達障害のある方が自立した生活を送っていただけるよう開設したグループホームです。一人ひとりの状況に応じた、きめ細やかな支援をおこなってまいります。</p>
+      <p>施設らしさをなくした、木のぬくもりを感じる家庭的な空間。「ただいま」と言える"おうち"で、自分らしい毎日を一緒に育んでいきます。</p>
+      <div class="slogan-box">
+        <span>ご利用者様の</span>
+        <span class="slogan-chip">安心</span>
+        <span class="slogan-chip gold">安全</span>
+        <span>をトータルでサポート</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- プレビューバナー -->
-<section class="section">
+<!-- ============ 施設アメニティ ============ -->
+<section class="section bg-ivory">
   <div class="container">
-    <div class="preview-banner">
-      <div class="preview-image">生活シーン写真</div>
-      <div class="preview-text">
-        <h2>いやしのおうちでの1日</h2>
-        <p>世話人・生活支援員が連携して、自立した豊かな日常生活をサポートします。</p>
-        <a href="day.html" class="btn btn-outline">1日の流れを詳しく見る →</a>
+    <div class="sec-ttl fade-up"><h2>施設アメニティ<span class="en">AMENITY</span></h2></div>
+    <div class="amenity-grid fade-up">
+      <div class="amenity-item"><div class="photo-ph">手洗い場</div></div>
+      <div class="amenity-item"><div class="photo-ph">キッチン</div></div>
+      <div class="amenity-item"><div class="photo-ph">お風呂</div></div>
+      <div class="amenity-item"><div class="photo-ph">トイレ</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ アクセス ============ -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="sec-ttl fade-up"><h2>アクセス<span class="en">ACCESS</span></h2></div>
+    <div class="access-map fade-up">
+      <iframe src="https://maps.google.com/maps?q=大阪市&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <ul class="access-list fade-up">
+      <li>🚉 ○○線「○○駅」から徒歩○分</li>
+      <li>🚌 ○○バス「○○停留所」から徒歩○分</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 入居のご案内 ============ -->
+<section class="section bg-emerald" id="guidance">
+  <div class="container">
+    <div class="sec-ttl fade-up"><h2>入居のご案内<span class="en">GUIDANCE</span></h2></div>
+
+    <!-- ご利用の手続き -->
+    <h3 class="h3_title fade-up" style="text-align:center;margin-bottom:24px;">ご利用の手続き</h3>
+    <div class="flow-cols fade-up">
+      <div class="flow-col"><p>利用をご希望のご本人様とご家族、またはご支援者様とご一緒にお越しください。見学・ご相談は無料です。</p></div>
+      <div class="flow-col"><p>ご本人様と面談させていただきます。あわせてご家族様・相談支援専門員・かかりつけ医からもお話をうかがいます。</p></div>
+      <div class="flow-col"><p>体験入居とご入居審査（通常一週間程度）により、ご入居の可否を判定させていただきます。</p></div>
+    </div>
+
+    <!-- サービスの内容 -->
+    <h3 class="h3_title fade-up" style="text-align:center;margin:48px 0 24px;">サービスの内容</h3>
+    <div class="service-grid fade-up">
+      <div class="service-card"><div class="s-ic">🍚</div><h4>食事の提供</h4><p>手づくりの朝食・夕食を毎日ご提供します。</p></div>
+      <div class="service-card"><div class="s-ic">🛁</div><h4>入浴・整容支援</h4><p>入浴や身だしなみのサポートをおこないます。</p></div>
+      <div class="service-card"><div class="s-ic">🧹</div><h4>家事支援</h4><p>掃除・洗濯など日常の家事を支援します。</p></div>
+      <div class="service-card"><div class="s-ic">💊</div><h4>服薬・健康管理</h4><p>服薬管理や体調管理、通院同行を行います。</p></div>
+      <div class="service-card"><div class="s-ic">🌙</div><h4>夜間支援</h4><p>夜間も職員が対応し、緊急時にも備えます。</p></div>
+      <div class="service-card"><div class="s-ic">🤝</div><h4>相談・連絡調整</h4><p>日中活動先や関係機関との連絡調整を行います。</p></div>
+    </div>
+
+    <!-- ご利用料金 -->
+    <h3 class="h3_title fade-up" style="text-align:center;margin:48px 0 24px;">ご利用料金</h3>
+    <div class="fee-table fade-up">
+      <table>
+        <thead>
+          <tr><th>項目</th><th>通常時期</th><th>夏季（7〜9月）<br>冬季（11〜1月）</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>家賃</th><td class="price">○○,000<span>円</span></td><td class="price">○○,000<span>円</span></td></tr>
+          <tr><th>特定障がい者特別給付費対象</th><td class="price">-10,000<span>円</span></td><td class="price">-10,000<span>円</span></td></tr>
+          <tr><th>水道光熱費</th><td class="price">○○,000<span>円</span></td><td class="price">○○,000<span>円</span></td></tr>
+          <tr><th>食費（朝夕二食）</th><td class="price">○○,000<span>円</span></td><td class="price">○○,000<span>円</span></td></tr>
+          <tr><th>雑費（日用品など）</th><td class="price">3,500<span>円</span></td><td class="price">3,500<span>円</span></td></tr>
+          <tr><th>修繕積立費</th><td class="price">3,000<span>円</span></td><td class="price">3,000<span>円</span></td></tr>
+          <tr class="total"><th>合計</th><td class="price">○○,000<span>円</span></td><td class="price">○○,000<span>円</span></td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:13px;color:#5F5E5A;margin-top:12px;">※障害福祉サービス費の自己負担分は、世帯の所得に応じて別途必要です（多くの方が0円〜少額）。</p>
+    </div>
+
+    <div class="fee-extra fade-up">
+      <h4>その他ご請求させていただく費用</h4>
+      <ul>
+        <li>個人でご利用の日用品・消耗品・嗜好品等の購入、教養・娯楽に要する費用</li>
+        <li>損害賠償保険料（年額：4,770円）</li>
+      </ul>
+    </div>
+
+    <!-- ご利用いただける方 -->
+    <h3 class="h3_title fade-up" style="text-align:center;margin:48px 0 24px;">ご利用いただける方</h3>
+    <ul class="check-list fade-up">
+      <li>18歳以上で、知的障害・発達障害があり、障害支援区分認定を受けている方</li>
+      <li>共同生活が可能な方</li>
+      <li>将来は自立した生活を目標とされ、入居を希望される方</li>
+      <li>日中は就労継続支援事業所やデイケアなどに通われている方</li>
+      <li>当ホームでの暮らしを維持するに足る一定の収入がある方</li>
+    </ul>
+    <p class="note-red fade-up" style="text-align:center;">※上記をすべて満たす方であれば、生活保護受給者の方もご利用いただけます。</p>
+  </div>
+</section>
+
+<!-- ============ よくあるご質問 ============ -->
+<section class="section bg-white" id="faq">
+  <div class="container">
+    <div class="sec-ttl fade-up"><h2>よくあるご質問<span class="en">FAQ</span></h2></div>
+
+    <!-- 入居について -->
+    <div class="faq-group fade-up">
+      <h3>入居について</h3>
+      <div class="acc-item">
+        <div class="acc-q"><span class="mark">Q</span>身寄りのない方も受け入れ可能でしょうか？<span class="arrow">▼</span></div>
+        <div class="acc-a"><div class="acc-a-inner"><span class="mark">A</span><div>可能です。成年後見人や保佐人などの制度もありますので、詳しくは一度ご相談ください。</div></div></div>
+      </div>
+      <div class="acc-item">
+        <div class="acc-q"><span class="mark">Q</span>生活保護受給者でも入居可能でしょうか？<span class="arrow">▼</span></div>
+        <div class="acc-a"><div class="acc-a-inner"><span class="mark">A</span><div>可能です。生活保護受給者の方でもご入居いただけます。</div></div></div>
+      </div>
+      <div class="acc-item">
+        <div class="acc-q"><span class="mark">Q</span>利用対象年齢を教えてください。<span class="arrow">▼</span></div>
+        <div class="acc-a"><div class="acc-a-inner"><span class="mark">A</span><div>18〜64歳の方を対象としております。ただし、入居中に65歳を迎えた場合も継続してご入居いただけます。</div></div></div>
+      </div>
+      <div class="acc-item">
+        <div class="acc-q"><span class="mark">Q</span>入居体験は可能でしょうか？<span class="arrow">▼</span></div>
+        <div class="acc-a"><div class="acc-a-inner"><span class="mark">A</span><div>可能です。一度見学いただき、ご希望に応じて体験入居をご利用いただけます。ご検討の方はお問い合わせください。</div></div></div>
       </div>
     </div>
-    <div class="preview-banner reverse">
-      <div class="preview-image">入居フロー写真</div>
-      <div class="preview-text">
-        <h2>ご入居の流れ・費用</h2>
-        <p>「どこから始めればいい？」「費用はどのくらい？」グループホームの利用に関するご不安・ご疑問に丁寧にお答えします。</p>
-        <a href="use.html" class="btn btn-outline">詳しく見る →</a>
+
+    <!-- 施設について -->
+    <div class="faq-group fade-up">
+      <h3>施設について</h3>
+      <div class="acc-item">
+        <div class="acc-q"><span class="mark">Q</span>居室内の掃除について教えてください。<span class="arrow">▼</span></div>
+        <div class="acc-a"><div class="acc-a-inner"><span class="mark">A</span><div>ご自身でできる方はご自身で行っていただきます。難しい方については施設で対応いたします。</div></div></div>
+      </div>
+      <div class="acc-item">
+        <div class="acc-q"><span class="mark">Q</span>各居室の環境や設備はどうなっていますか？<span class="arrow">▼</span></div>
+        <div class="acc-a"><div class="acc-a-inner"><span class="mark">A</span><div>エアコン・照明完備の個室です。プライベートな時間をしっかり守れる、明るく快適なお部屋をご用意しています。</div></div></div>
+      </div>
+      <div class="acc-item">
+        <div class="acc-q"><span class="mark">Q</span>生活家電などの持ち込みはできますか？<span class="arrow">▼</span></div>
+        <div class="acc-a"><div class="acc-a-inner"><span class="mark">A</span><div>テレビ・冷蔵庫・ベッド・タンスなどはお持ち込みいただけます。持ち込み品については一度ご相談ください。</div></div></div>
+      </div>
+    </div>
+
+    <!-- 入居の生活について -->
+    <div class="faq-group fade-up">
+      <h3>入居の生活について</h3>
+      <div class="acc-item">
+        <div class="acc-q"><span class="mark">Q</span>どのような生活を送るのですか？<span class="arrow">▼</span></div>
+        <div class="acc-a"><div class="acc-a-inner"><span class="mark">A</span><div>日常生活（掃除・洗濯・食事・入浴など）のサポートを受けながら、自立した生活を目指して過ごします。平日は就労先や生活介護へ、休日はご自身の趣味や自由時間を過ごされています。</div></div></div>
+      </div>
+      <div class="acc-item">
+        <div class="acc-q"><span class="mark">Q</span>食事についてはどうなっていますか？<span class="arrow">▼</span></div>
+        <div class="acc-a"><div class="acc-a-inner"><span class="mark">A</span><div>キッチンを備えており、世話人が毎日調理して手づくりの食事を提供しています。</div></div></div>
+      </div>
+      <div class="acc-item">
+        <div class="acc-q"><span class="mark">Q</span>薬の管理についてはどうなっていますか？<span class="arrow">▼</span></div>
+        <div class="acc-a"><div class="acc-a-inner"><span class="mark">A</span><div>ご自身で管理できる方にはお願いしております。難しい方については施設で管理いたします。一度ご相談ください。</div></div></div>
+      </div>
+      <div class="acc-item">
+        <div class="acc-q"><span class="mark">Q</span>面会についてはどうなっていますか？<span class="arrow">▼</span></div>
+        <div class="acc-a"><div class="acc-a-inner"><span class="mark">A</span><div>面会時間は10:00〜17:00です。それ以外の時間は事前に施設へご連絡のうえ対応いたします。体調不良時の面会はご遠慮ください。</div></div></div>
+      </div>
+      <div class="acc-item">
+        <div class="acc-q"><span class="mark">Q</span>性別による配慮はありますか？<span class="arrow">▼</span></div>
+        <div class="acc-a"><div class="acc-a-inner"><span class="mark">A</span><div>居室やスペースを配慮して運営しておりますのでご安心ください。詳細はお問い合わせください。</div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTAセクション -->
-<section class="cta-section">
-  <h2>お気軽にご相談ください</h2>
-  <div class="cta-channels">
-    <a href="tel:0000000000" class="cta-channel">
-      <span class="icon">☎</span>
-      <div class="label">お電話でのお問い合わせ</div>
-      <div class="value">XXX-XXXX-XXXX</div>
-    </a>
-    <a href="contact.html" class="cta-channel">
-      <span class="icon">✉</span>
-      <div class="label">お問い合わせフォーム</div>
-      <div class="value">24時間受付</div>
-    </a>
-    <a href="#" class="cta-channel">
-      <span class="icon">💬</span>
-      <div class="label">LINEで気軽に相談</div>
-      <div class="value">友だち追加</div>
-    </a>
+<!-- ============ 運営会社 ============ -->
+<section class="section bg-ivory" id="company">
+  <div class="container">
+    <div class="sec-ttl fade-up"><h2>運営会社<span class="en">COMPANY</span></h2></div>
+    <h3 class="h3_title fade-up" style="text-align:center;margin-bottom:24px;">「いやしのおうち」は（法人名）が運営しています。</h3>
+    <div class="info-dl fade-up">
+      <dl>
+        <dt>運営法人</dt><dd>（法人名）</dd>
+        <dt>施設名称</dt><dd>障がい者グループホーム『いやしのおうち』</dd>
+        <dt>住所</dt><dd>〒XXX-XXXX 大阪府○○市○○町X-X-X</dd>
+        <dt>TEL・FAX</dt><dd>TEL：XXX-XXXX-XXXX　FAX：XXX-XXXX-XXXX</dd>
+        <dt>設立</dt><dd>20XX年X月X日</dd>
+        <dt>事業所番号</dt><dd>XXXXXXXXXX</dd>
+        <dt>サービス類型</dt><dd>共同生活援助（介護サービス包括型）</dd>
+        <dt>代表者</dt><dd>（代表者名）</dd>
+        <dt>メールアドレス</dt><dd>info@iyashinouchi.jp</dd>
+      </dl>
+    </div>
   </div>
 </section>
 
-<!-- 採用バナー -->
-<section class="recruit-banner">
-  <h2>ご一緒に働きませんか？</h2>
-  <p>いやしのおうちでは、利用者さまを一緒に支える仲間を募集しています。経験がない方も大歓迎です。</p>
-  <a href="recruit.html" class="btn btn-outline">採用情報を見る →</a>
+<!-- ============ 求人情報 ============ -->
+<section class="section bg-white" id="recruit">
+  <div class="container">
+    <div class="sec-ttl fade-up"><h2>求人情報<span class="en">RECRUIT</span></h2></div>
+    <h3 class="h3_title fade-up" style="text-align:center;margin-bottom:24px;">「いやしのおうち」の求人情報について</h3>
+    <div class="info-dl fade-up">
+      <dl>
+        <dt>仕事内容</dt><dd>食事の提供、掃除・洗濯など入居者様の日常生活のサポートです。経験は問いません。<br><a href="contact.html" style="color:#0F6E56;">お問い合わせフォームはこちら →</a></dd>
+        <dt>募集職種</dt><dd>世話人・生活支援員・サービス管理責任者</dd>
+        <dt>給与・待遇</dt><dd>経験・資格により優遇／仮眠休憩あり／交通費別途支給（上限あり）／処遇改善加算適用／資格取得支援あり</dd>
+      </dl>
+    </div>
+    <div style="text-align:center;margin-top:32px;" class="fade-up">
+      <a href="contact.html" class="btn btn-primary">採用について問い合わせる</a>
+    </div>
+  </div>
 </section>
 
-<!-- フッター -->
+<!-- ============ フッター ============ -->
+<div class="footer-rainbow"></div>
 <footer class="footer">
   <div class="footer-grid">
     <div class="footer-info">
@@ -168,15 +327,31 @@
       <p>〒XXX-XXXX 大阪府○○市○○町X-X-X<br>TEL：XXX-XXXX-XXXX<br>受付：平日 9:00〜17:00</p>
     </div>
     <nav class="footer-nav">
-      <a href="about.html">ホームのご案内</a>
-      <a href="day.html">1日の流れ</a>
-      <a href="use.html">ご入居の流れ・費用</a>
-      <a href="recruit.html">採用情報</a>
+      <a href="#facility">施設紹介</a>
+      <a href="#guidance">入居のご案内</a>
+      <a href="#faq">よくあるご質問</a>
+      <a href="#company">運営会社</a>
+      <a href="#recruit">求人情報</a>
       <a href="contact.html">お問い合わせ</a>
     </nav>
   </div>
-  <div class="footer-copyright">© 2025 いやしのおうち All Rights Reserved.</div>
+  <div class="footer-copyright">© 2026 いやしのおうち All Rights Reserved.</div>
 </footer>
+
+<script>
+document.querySelectorAll('.acc-q').forEach(function(q){
+  q.addEventListener('click', function(){
+    var item = q.parentElement;
+    var a = q.nextElementSibling;
+    item.classList.toggle('open');
+    a.style.maxHeight = item.classList.contains('open') ? a.scrollHeight + 'px' : null;
+  });
+});
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('shown'); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(function(el){ io.observe(el); });
+</script>
 
 </body>
 </html>
