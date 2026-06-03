@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="キッチン">
+<title>キッチン</title><desc>キッチンのイラスト</desc>
+
+<rect width="800" height="600" fill="#EBF6F1"/>
+<rect x="0" y="400" width="800" height="200" fill="#E8C9A8"/>
+<rect x="80" y="360" width="640" height="60" fill="#FFFFFF"/>
+<rect x="540" y="150" width="180" height="150" rx="8" fill="#CDEAE0"/>
+<rect x="622" y="150" width="14" height="150" fill="#FFFFFF"/>
+<circle cx="220" cy="330" r="42" fill="#57B89B"/>
+<rect x="200" y="300" width="40" height="20" rx="6" fill="#E3C883"/>
+<rect x="360" y="290" width="60" height="70" rx="8" fill="#9DD9C4"/>
+<rect x="120" y="440" width="120" height="120" rx="8" fill="#D8B88E"/>
+
+</svg>

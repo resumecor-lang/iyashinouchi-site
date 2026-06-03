@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="あたたかな家の風景">
+<title>あたたかな家の風景</title><desc>淡い緑の庭と家のイラスト</desc>
+
+<rect width="1600" height="900" fill="#EBF6F1"/>
+<circle cx="1300" cy="200" r="90" fill="#F2D49C"/>
+<path d="M0 640 Q400 560 800 620 T1600 600 L1600 900 L0 900 Z" fill="#CDEAE0"/>
+<path d="M0 720 Q500 660 1000 710 T1600 700 L1600 900 L0 900 Z" fill="#9DD9C4"/>
+<!-- house -->
+<rect x="560" y="430" width="480" height="300" rx="10" fill="#FFFFFF"/>
+<path d="M520 440 L800 270 L1080 440 Z" fill="#57B89B"/>
+<path d="M800 270 L1080 440 L800 440 Z" fill="#3C8B72"/>
+<rect x="620" y="520" width="120" height="120" rx="6" fill="#CDEAE0"/>
+<rect x="675" y="520" width="10" height="120" fill="#FFFFFF"/>
+<rect x="620" y="575" width="120" height="10" fill="#FFFFFF"/>
+<rect x="860" y="540" width="120" height="190" rx="6" fill="#E8C9A8"/>
+<circle cx="950" cy="635" r="9" fill="#E3C883"/>
+<!-- trees/plants -->
+<circle cx="380" cy="600" r="80" fill="#57B89B"/>
+<rect x="368" y="600" width="24" height="130" fill="#D8B88E"/>
+<circle cx="1240" cy="640" r="60" fill="#3C8B72"/>
+<rect x="1230" y="640" width="20" height="100" fill="#D8B88E"/>
+<circle cx="1120" cy="690" r="36" fill="#9DD9C4"/>
+
+</svg>

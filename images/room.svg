@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="お部屋">
+<title>お部屋</title><desc>個室のイラスト</desc>
+
+<rect width="800" height="600" fill="#EBF6F1"/>
+<rect x="0" y="430" width="800" height="170" fill="#E8C9A8"/>
+<rect x="120" y="150" width="200" height="150" rx="8" fill="#CDEAE0"/>
+<rect x="212" y="150" width="16" height="150" fill="#FFFFFF"/>
+<rect x="120" y="217" width="200" height="16" fill="#FFFFFF"/>
+<rect x="430" y="330" width="290" height="120" rx="10" fill="#FFFFFF"/>
+<rect x="430" y="300" width="290" height="50" rx="10" fill="#9DD9C4"/>
+<rect x="445" y="250" width="80" height="60" rx="8" fill="#F2D49C"/>
+<circle cx="640" cy="170" r="44" fill="#57B89B"/>
+<rect x="632" y="170" width="16" height="80" fill="#D8B88E"/>
+
+</svg>

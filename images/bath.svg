@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="お風呂">
+<title>お風呂</title><desc>浴室のイラスト</desc>
+
+<rect width="800" height="600" fill="#EBF6F1"/>
+<rect x="0" y="440" width="800" height="160" fill="#CDEAE0"/>
+<rect x="160" y="340" width="480" height="160" rx="80" fill="#FFFFFF"/>
+<rect x="190" y="360" width="420" height="90" rx="45" fill="#9DD9C4"/>
+<rect x="520" y="220" width="180" height="140" rx="8" fill="#CDEAE0"/>
+<rect x="602" y="220" width="14" height="140" fill="#FFFFFF"/>
+<circle cx="250" cy="300" r="14" fill="#F2D49C"/>
+<circle cx="300" cy="280" r="10" fill="#F2D49C"/>
+
+</svg>

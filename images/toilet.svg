@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="トイレ">
+<title>トイレ</title><desc>トイレのイラスト</desc>
+
+<rect width="800" height="600" fill="#EBF6F1"/>
+<rect x="0" y="470" width="800" height="130" fill="#CDEAE0"/>
+<rect x="330" y="240" width="150" height="120" rx="16" fill="#FFFFFF"/>
+<rect x="350" y="350" width="110" height="130" rx="20" fill="#FFFFFF"/>
+<ellipse cx="405" cy="360" rx="70" ry="26" fill="#9DD9C4"/>
+<rect x="560" y="180" width="120" height="120" rx="8" fill="#CDEAE0"/>
+<circle cx="180" cy="320" r="44" fill="#57B89B"/>
+<rect x="172" y="320" width="16" height="100" fill="#D8B88E"/>
+
+</svg>
