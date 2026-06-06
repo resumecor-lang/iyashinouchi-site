@@ -6,10 +6,10 @@
     <title>障がい者グループホーム いやしのおうち | ほっとできる、もうひとつのうち。</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts (Zen Maru Gothic & Quicksand for cute Japanese and English) -->
+    <!-- Google Fonts (Zen Maru Gothic for warm, soft Japanese layout) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -20,7 +20,7 @@
                             green: '#5B8C5A',       /* チラシの深緑 */
                             'green-light': '#8BBF8A', /* 水彩の淡い黄緑 */
                             'green-bg': '#EBF3EB',    /* 優しい背景の緑 */
-                            sky: '#D2E6F1',         /* ソラノイエから着想した澄んだ青空ブルー */
+                            sky: '#D2E6F1',         /* ソラノイエの澄んだ青空ブルー */
                             'sky-light': '#F0F6FA',   /* 爽やかな空色の背景 */
                             beige: '#FAF6F0',       /* 温かみのある地色 */
                             text: '#4A3B32',        /* 手書き風の優しい茶色 */
@@ -49,6 +49,7 @@
         
         .handwritten-btn {
             border-radius: 120px 20px 100px 25px/25px 100px 30px 120px;
+            border: 2.5px solid #4A3B32;
         }
 
         /* ソラノイエ風のなだらかな「雲」や「水彩」のゆらぎ背景 */
@@ -83,7 +84,7 @@
 
         @keyframes drift {
             0%, 100% { border-radius: 48% 52% 50% 50% / 40% 45% 55% 60%; }
-            50% { border-radius: 52% 48% 55% 45% / 45% 40% 60 55%; }
+            50% { border-radius: 52% 48% 55% 45% / 45% 40% 60% 55%; }
         }
         .drift-bg {
             animation: drift 10s ease-in-out infinite;
@@ -98,12 +99,17 @@
             <!-- Logo & Brand Title -->
             <a href="#" class="flex items-center gap-2 group">
                 <div class="text-brand-green group-hover:scale-105 transition-transform duration-300 flex items-center">
-                    <!-- おうちと空をイメージしたロゴSVG -->
-                    <svg class="w-10 h-10" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M10 26 L32 8 L54 26 M16 22 V54 H48 V22" />
-                        <rect x="24" y="36" width="16" height="18" rx="2" />
-                        <path d="M12 14 A 4 4 0 1 1 18 18" stroke="currentColor" stroke-width="2" />
-                        <circle cx="46" cy="14" r="3" fill="#D99B78" stroke="none" />
+                    <!-- おうちと空をイメージした完全手描き風ロゴSVG -->
+                    <svg class="w-12 h-12" viewBox="0 0 64 64" fill="none">
+                        <!-- 黄色いお日様ぬりえ -->
+                        <circle cx="50" cy="18" r="8" fill="#FDF3CD" />
+                        <!-- 手書きのおうち線画 -->
+                        <path d="M12 28 L32 10 L52 28" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18 25 V52 H46 V25" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M26 38 H38 V52 H26 Z" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="#FAF6F0"/>
+                        <!-- 小さな煙突と煙 -->
+                        <path d="M42 19 V15 H46 V23" stroke="#4A3B32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M45 11 Q48 8 46 5" stroke="#4A3B32" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>
                 </div>
                 <div class="flex flex-col">
@@ -123,8 +129,9 @@
                 
                 <!-- CTA Button -->
                 <a href="tel:080-6619-2027" class="bg-brand-green text-white hover:bg-brand-green-light px-5 py-3 rounded-full flex items-center gap-2 shadow-sm transition transform hover:-translate-y-0.5 font-black text-xs">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 00-2-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 00 2 2z"/>
+                    <!-- 手描きタッチの受話器 -->
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                     </svg>
                     見学・ご相談はこちら
                 </a>
@@ -151,7 +158,9 @@
                 <a href="#recruit" class="block py-2.5 text-brand-text hover:bg-brand-green-bg rounded-lg">採用情報</a>
                 <a href="#contact" class="block py-2.5 text-brand-text hover:bg-brand-green-bg rounded-lg">お問い合わせ</a>
                 <a href="tel:080-6619-2027" class="w-full bg-brand-green text-white py-3 rounded-full flex items-center justify-center gap-2 shadow mt-4 font-black">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1.3 1.3 0 01-.321 1.15l-1.17 1.17a14.07 14.07 0 005.47 5.47l1.17-1.17a1.3 1.3 0 011.15-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
                     <span>電話で見学・相談をする</span>
                 </a>
             </div>
@@ -161,13 +170,14 @@
     <!-- HERO SECTION -->
     <section id="home" class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 bg-gradient-to-b from-[#FAF6F0] via-[#F4F8FA] to-[#FFFFFF]">
         
-        <!-- 背景の装飾イラスト -->
+        <!-- 背景の手書き装飾（絵本風雲イラスト） -->
         <div class="absolute top-10 left-10 opacity-60 pointer-events-none hidden md:block float-sketch">
             <svg class="w-24 h-16 text-brand-sky" viewBox="0 0 100 60" fill="currentColor">
                 <path d="M20 40a15 15 0 0 1 15-15 12 12 0 0 1 18-5 15 15 0 0 1 25 5 15 15 0 0 1 5 29h-63a15 15 0 0 1 0-14z"/>
             </svg>
         </div>
         <div class="absolute bottom-20 left-6 opacity-30 pointer-events-none hidden lg:block float-sketch" style="animation-delay: 2s;">
+            <!-- 手描きの葉っぱイラスト -->
             <svg class="w-12 h-12 text-brand-green-light" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M21 5c-1.11-.08-2.23.19-3.21.75C16.81 3.4 14.12 1.95 11 2.5v1.03c2.44-.45 4.58.74 5.37 2.92-1.09-.45-2.27-.67-3.47-.63L11 6v1c1.55-.07 3.09.24 4.5.91l-1.6 1.6c-.66-.2-1.35-.29-2.04-.26L11 9.5v1.02c1.03-.04 2.05.15 3 .55l-2.4 2.4c-.5-.1-1-.15-1.5-.15-2.76 0-5 2.24-5 5h12c1.38 0 2.5-1.12 2.5-2.5 0-.74-.32-1.4-.83-1.85.54-1.08.83-2.27.83-3.48V5h-.1z"/>
             </svg>
@@ -211,19 +221,20 @@
                     </div>
                 </div>
 
-                <!-- Right Video Frame -->
+                <!-- Right Video Frame (手描きイラスト風フレームに囲まれた温かいループ動画) -->
                 <div class="lg:col-span-6 relative flex justify-center">
                     <div class="absolute -top-12 -right-8 w-36 h-36 text-brand-sky/40 pointer-events-none float-sketch">
+                        <!-- 手描きのきらきらイラスト -->
                         <svg viewBox="0 0 100 100" fill="currentColor">
                             <path d="M50 15 C 55 35, 75 35, 75 50 C 75 65, 55 65, 50 85 C 45 65, 25 65, 25 50 C 25 35, 45 35, 50 15 Z" />
                         </svg>
                     </div>
 
-                    <!-- メイン動画コンテナ -->
+                    <!-- メイン動画コンテナ（手書きスケッチフレーム） -->
                     <div class="relative w-full max-w-lg z-10 p-3">
                         <div class="overflow-hidden bg-[#FAF6F0] p-2 border-4 border-white shadow-2xl rounded-[2.5rem] transform rotate-1 hover:rotate-0 transition duration-500 handwritten-border">
                             
-                            <!-- ルーム動画 -->
+                            <!-- ルーム動画（お部屋の温かい光や木の質感が伝わる癒やしのループ動画） -->
                             <div class="relative w-full h-80 sm:h-96 rounded-[2rem] overflow-hidden bg-stone-100">
                                 <video 
                                     class="w-full h-full object-cover" 
@@ -267,12 +278,13 @@
         </div>
     </section>
 
-    <!-- SECTION: WHAT WE CHERISH -->
+    <!-- SECTION: WHAT WE CHERISH (私たちが大切にしていること) -->
     <section id="about" class="py-20 lg:py-28 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
             
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <div class="flex items-center justify-center gap-1.5 text-brand-green font-bold text-sm mb-3">
+                    <!-- 手描き風のハート葉っぱSVG -->
                     <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
                     </svg>
@@ -281,6 +293,7 @@
                 <h2 class="text-3.5xl sm:text-4xl font-black text-brand-text tracking-wider">
                     施設ではなく「おうち」
                 </h2>
+                <!-- 手描き風波ライン下線 -->
                 <svg class="w-24 h-2 mx-auto mt-3 text-brand-green-light" viewBox="0 0 100 10" preserveAspectRatio="none">
                     <path d="M0,5 Q25,0 50,5 T100,5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
                 </svg>
@@ -288,6 +301,8 @@
 
             <!-- Content Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Polaroid Hand-drawn Style Frame (Unsplashのクリーンすぎる実写ではなく温かみ溢れるリビング風景) -->
                 <div class="lg:col-span-5 flex justify-center order-2 lg:order-1">
                     <div class="bg-[#FAF8F5] p-5 rounded-3xl shadow-xl border border-[#ECE6DA] transform -rotate-2 hover:rotate-0 transition duration-300 max-w-sm handwritten-border">
                         <div class="overflow-hidden rounded-2xl bg-white">
@@ -300,6 +315,7 @@
                     </div>
                 </div>
 
+                <!-- Right Contents -->
                 <div class="lg:col-span-7 space-y-8 order-1 lg:order-2">
                     <p class="text-lg sm:text-xl font-black text-brand-green leading-relaxed">
                         ただ暮らす場所としての「施設」ではなく、毎日「ただいま」と帰りたくなる、温かな「おうち」でありたい。
@@ -307,8 +323,11 @@
                     
                     <ul class="space-y-6">
                         <li class="flex items-start gap-3">
-                            <div class="mt-1 bg-brand-green-bg p-1.5 rounded-full text-brand-green flex-shrink-0">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <!-- クレヨン調の歪んだチェックマーク -->
+                            <div class="mt-1 bg-brand-green-bg p-1.5 rounded-full text-brand-green flex-shrink-0 flex items-center justify-center">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 12 L9 17 L20 6" />
+                                </svg>
                             </div>
                             <div>
                                 <h4 class="font-black text-lg text-brand-text">毎日帰りたくなる場所。</h4>
@@ -316,17 +335,21 @@
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="mt-1 bg-brand-green-bg p-1.5 rounded-full text-brand-green flex-shrink-0">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <div class="mt-1 bg-brand-green-bg p-1.5 rounded-full text-brand-green flex-shrink-0 flex items-center justify-center">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 12 L9 17 L20 6" />
+                                </svg>
                             </div>
                             <div>
                                 <h4 class="font-black text-lg text-brand-text">ほっとひと息つける個室。</h4>
-                                <p class="text-sm text-brand-text/80 mt-1">周りを気にせず、じぶん時間を存分に満喰できるプライベートな個室をご用意しています。</p>
+                                <p class="text-sm text-brand-text/80 mt-1">周りを気にせず、じぶん時間を存分に満喫できるプライベートな個室をご用意しています。</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="mt-1 bg-brand-green-bg p-1.5 rounded-full text-brand-green flex-shrink-0">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <div class="mt-1 bg-brand-green-bg p-1.5 rounded-full text-brand-green flex-shrink-0 flex items-center justify-center">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 12 L9 17 L20 6" />
+                                </svg>
                             </div>
                             <div>
                                 <h4 class="font-black text-lg text-brand-text">笑顔と会話が生まれる場所。</h4>
@@ -366,12 +389,22 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 
-                <!-- Card 1: 木のぬくもり -->
+                <!-- Card 1: 木のぬくもり (2D手描き切り株・葉っぱ) -->
                 <div class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center border border-[#ECE5DA]/40 transform hover:-translate-y-1">
-                    <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-green drift-bg text-brand-green">
-                        <svg class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-9 8.2z"/>
-                            <path d="M9 22v-4h4"/>
+                    <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-green drift-bg relative">
+                        <!-- 手描き切り株とふたばの2DイラストSVG -->
+                        <svg class="w-16 h-16 relative z-10" viewBox="0 0 64 64" fill="none">
+                            <!-- ゆるい塗り（水彩ズレ風） -->
+                            <ellipse cx="32" cy="46" rx="20" ry="8" fill="#D3EAD3" />
+                            <path d="M22 34 Q32 24 38 14" fill="#CCE3CC" />
+                            <!-- 手描きの茶色線 -->
+                            <path d="M12 48 C20 48, 25 50, 52 48" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" />
+                            <path d="M22 48 V34 Q22 28 28 26 Q34 24 42 26 V48" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <!-- 年輪 -->
+                            <ellipse cx="32" cy="30" rx="10" ry="4" stroke="#4A3B32" stroke-width="1.5" fill="none" />
+                            <!-- 葉っぱ -->
+                            <path d="M38 18 Q46 10 40 4 Q32 10 38 18 Z" stroke="#4A3B32" stroke-width="2" fill="#8BBF8A" stroke-linejoin="round" />
+                            <path d="M36 18 Q28 14 30 8 Q36 10 36 18 Z" stroke="#4A3B32" stroke-width="2" fill="#A8D6A8" stroke-linejoin="round" />
                         </svg>
                     </div>
                     <h3 class="font-black text-xl text-brand-text mb-3">木のぬくもり</h3>
@@ -380,12 +413,22 @@
                     </p>
                 </div>
 
-                <!-- Card 2: 全室個室 -->
+                <!-- Card 2: 全室個室 (2D手描き絵本ハウス) -->
                 <div class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center border border-[#ECE5DA]/40 transform hover:-translate-y-1">
-                    <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-sky drift-bg text-brand-green">
-                        <svg class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                            <path d="M9 22V12h6v10"/>
+                    <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-sky drift-bg relative">
+                        <!-- 手描きおうちの2DイラストSVG -->
+                        <svg class="w-16 h-16 relative z-10" viewBox="0 0 64 64" fill="none">
+                            <!-- ゆるい塗り（水彩ズレ風） -->
+                            <polygon points="12,28 32,10 52,28" fill="#D2E6F1" />
+                            <rect x="18" y="28" width="28" height="24" fill="#E8F1F5" />
+                            <!-- 手描きの茶色線 -->
+                            <path d="M10 28 L32 8 L54 28" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 26 V52 H48 V26" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <!-- ドアと窓 -->
+                            <path d="M22 38 H30 V52 H22 Z" stroke="#4A3B32" stroke-width="2" fill="#FDF3CD"/>
+                            <circle cx="36" cy="36" r="4" stroke="#4A3B32" stroke-width="2" fill="#FFFFFF" />
+                            <path d="M32 36 H40" stroke="#4A3B32" stroke-width="1.5" />
+                            <path d="M36 32 V40" stroke="#4A3B32" stroke-width="1.5" />
                         </svg>
                     </div>
                     <h3 class="font-black text-xl text-brand-text mb-3">全室個室</h3>
@@ -394,14 +437,24 @@
                     </p>
                 </div>
 
-                <!-- Card 3: 手づくりの食事 -->
+                <!-- Card 3: 手づくりの食事 (2D手描きおにぎり・お味噌汁) -->
                 <div class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center border border-[#ECE5DA]/40 transform hover:-translate-y-1">
-                    <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-pink drift-bg text-[#E07A70]">
-                        <svg class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                            <path d="M12 2v4M12 18v4M3 12h18" opacity="0.2"/>
-                            <path d="M3 19h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/>
-                            <path d="M12 11c0 2-1 3-3 3M15 11c0 2 1 3 3 3"/>
+                    <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-pink drift-bg relative">
+                        <!-- 手描きおにぎり・汁物の2DイラストSVG -->
+                        <svg class="w-16 h-16 relative z-10" viewBox="0 0 64 64" fill="none">
+                            <!-- ゆるい塗り（水彩ズレ風） -->
+                            <path d="M14 42 Q28 20 42 42 Z" fill="#F9DEDC" />
+                            <ellipse cx="44" cy="48" rx="14" ry="8" fill="#F4B5B1" />
+                            <!-- 手書きの茶色線（おにぎり） -->
+                            <path d="M12 44 Q26 18 40 44 Z" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF" />
+                            <!-- おにぎりののり -->
+                            <path d="M22 44 H30 V34 H22 Z" stroke="#4A3B32" stroke-width="2" fill="#4A3B32" stroke-linejoin="round" />
+                            <!-- お椀 -->
+                            <path d="M30 46 C30 54, 58 54, 58 46 Z" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="#E07A70" />
+                            <path d="M38 52 H50" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" />
+                            <!-- 湯気 -->
+                            <path d="M38 38 Q40 32 38 28" stroke="#4A3B32" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M46 36 Q48 30 46 26" stroke="#4A3B32" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
                     </div>
                     <h3 class="font-black text-xl text-brand-text mb-3">手づくりの食事</h3>
@@ -410,11 +463,21 @@
                     </p>
                 </div>
 
-                <!-- Card 4: 安心のサポート -->
+                <!-- Card 4: 安心のサポート (2D手描きハートとおてて) -->
                 <div class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center border border-[#ECE5DA]/40 transform hover:-translate-y-1">
-                    <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-yellow drift-bg text-brand-orange">
-                        <svg class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-yellow drift-bg relative">
+                        <!-- 手描きハートを包む手の2DイラストSVG -->
+                        <svg class="w-16 h-16 relative z-10" viewBox="0 0 64 64" fill="none">
+                            <!-- ゆるい塗り（水彩ズレ風） -->
+                            <path d="M32 40 C22 28, 16 16, 32 10 C48 16, 42 28, 32 40 Z" fill="#FCE5CD" />
+                            <!-- 手書きの茶色線（ハート） -->
+                            <path d="M32 42 C14 26, 12 12, 32 8 C52 12, 50 26, 32 42 Z" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="#E07A70" />
+                            <!-- 包み込むおてて -->
+                            <path d="M12 48 Q20 40 30 46" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                            <path d="M52 48 Q44 40 34 46" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                            <!-- 小さなきらきら -->
+                            <path d="M14 16 L18 20 M18 16 L14 20" stroke="#4A3B32" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M46 16 L50 20 M50 16 L46 20" stroke="#4A3B32" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
                     </div>
                     <h3 class="font-black text-xl text-brand-text mb-3">安心のサポート</h3>
@@ -427,7 +490,7 @@
         </div>
     </section>
 
-    <!-- SECTION: GUIDE -->
+    <!-- SECTION: GUIDE (ご利用案内と実質負担シミュレーター) -->
     <section id="guide" class="py-20 lg:py-28 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
@@ -449,9 +512,10 @@
             <!-- Double Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 
-                <!-- Left: Target Audience -->
+                <!-- Left: Target Audience (Sora no Ie Style checklist) -->
                 <div class="lg:col-span-5 bg-brand-sky-light/80 p-8 rounded-[2.5rem] border-2 border-brand-sky/40 relative">
                     <div class="absolute -top-6 -right-6 text-brand-sky opacity-80 float-sketch">
+                        <!-- 手描きのくもSVG -->
                         <svg class="w-16 h-12" viewBox="0 0 100 60" fill="currentColor">
                             <path d="M20 40a15 15 0 0 1 15-15 12 12 0 0 1 18-5 15 15 0 0 1 25 5 15 15 0 0 1 5 29h-63a15 15 0 0 1 0-14z"/>
                         </svg>
@@ -546,22 +610,22 @@
 
             </div>
 
-            <!-- Steps -->
+            <!-- Steps (3つの手描きステップ) -->
             <div class="mt-20">
                 <h3 class="text-center text-2xl font-black text-brand-text mb-12">入居までのあたたかい3ステップ</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
                     <div class="bg-[#FCFAF7] p-8 rounded-3xl border border-[#ECE5DA] relative handwritten-border">
-                        <span class="text-4xl font-black text-brand-green-light/45 absolute top-4 right-6 font-mono">01</span>
+                        <span class="text-4xl font-mono font-black text-brand-green-light/40 absolute top-4 right-6">01</span>
                         <h3 class="font-black text-xl text-brand-text mb-3">お問合せ・まずは見学</h3>
                         <p class="text-sm text-brand-text/80 leading-relaxed font-medium">まずはお電話やフォームからお気軽に見学希望日をご連絡。お部屋や共有スペースの木の香りを直接感じてください。</p>
                     </div>
                     <div class="bg-[#FCFAF7] p-8 rounded-3xl border border-[#ECE5DA] relative handwritten-border">
-                        <span class="text-4xl font-black text-brand-green-light/45 absolute top-4 right-6 font-mono">02</span>
+                        <span class="text-4xl font-mono font-black text-brand-green-light/40 absolute top-4 right-6">02</span>
                         <h3 class="font-black text-xl text-brand-text mb-3">安心の体験入居</h3>
                         <p class="text-sm text-brand-text/80 leading-relaxed font-medium">数日〜数週間の体験利用が可能です。実際の美味しいご飯、暮らしの雰囲気、他メンバーとの団らんを体験して相性を見極められます。</p>
                     </div>
                     <div class="bg-[#FCFAF7] p-8 rounded-3xl border border-[#ECE5DA] relative handwritten-border">
-                        <span class="text-4xl font-black text-brand-green-light/45 absolute top-4 right-6 font-mono">03</span>
+                        <span class="text-4xl font-mono font-black text-brand-green-light/40 absolute top-4 right-6">03</span>
                         <h3 class="font-black text-xl text-brand-text mb-3">ご契約・新生活の始まり</h3>
                         <p class="text-sm text-brand-text/80 leading-relaxed font-medium">ご本人様、ご家族様とも十分にご納得をいただけましたら本入居の手続きを行い、いやしのおうちでの新しい安心生活がスタート！</p>
                     </div>
@@ -588,18 +652,23 @@
                 </svg>
             </div>
 
-            <!-- Daily Flow Steps -->
+            <!-- Daily Flow Steps (4つのステップをかわいい手書き2Dイラストで配置) -->
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
                 
                 <div class="absolute top-1/4 left-[12%] right-[12%] h-0.5 border-t-2 border-dashed border-brand-green/35 hidden md:block z-0"></div>
 
-                <!-- Step 1: 朝 -->
+                <!-- Step 1: 朝 (手描きスープ・ごはん) -->
                 <div class="relative bg-white p-6 rounded-3xl border border-[#ECE5DA] text-center flex flex-col items-center z-10 handwritten-border hover:shadow-md transition">
                     <span class="absolute -top-4 bg-brand-green text-white text-xs font-black px-4 py-1.5 rounded-full shadow-sm">AM 7:00 〜</span>
-                    <div class="w-16 h-16 bg-brand-green-bg text-brand-green rounded-full flex items-center justify-center shadow-sm my-4">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 8H6c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-9c0-1.1-.9-2-2-2z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 8V5c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v3"/>
+                    <div class="w-20 h-20 bg-brand-green-bg rounded-full flex items-center justify-center my-4 relative">
+                        <!-- 水彩風の塗りと手書きおにぎり茶わんSVG -->
+                        <svg class="w-14 h-14 relative z-10" viewBox="0 0 64 64" fill="none">
+                            <ellipse cx="32" cy="44" rx="16" ry="6" fill="#D3EAD3" />
+                            <path d="M18 42 C18 50, 46 50, 46 42" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="#FFFFFF" />
+                            <path d="M22 42 Q32 20 42 42 Z" stroke="#4A3B32" stroke-width="2" stroke-linecap="round" fill="#FAF6F0" />
+                            <!-- 湯気 -->
+                            <path d="M28 26 Q30 20 28 16" stroke="#4A3B32" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M36 24 Q38 18 36 14" stroke="#4A3B32" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
                     </div>
                     <h3 class="font-black text-lg text-brand-text mb-1">朝の時間</h3>
@@ -607,12 +676,18 @@
                     <p class="text-xs text-brand-text/80 leading-relaxed font-medium">おいしい朝食で、笑顔いっぱいの元気な一日をさわやかにスタート！</p>
                 </div>
 
-                <!-- Step 2: 昼 -->
+                <!-- Step 2: 昼 (手描きカバン・お日様) -->
                 <div class="relative bg-white p-6 rounded-3xl border border-[#ECE5DA] text-center flex flex-col items-center z-10 handwritten-border hover:shadow-md transition">
                     <span class="absolute -top-4 bg-brand-green text-white text-xs font-black px-4 py-1.5 rounded-full shadow-sm">AM 9:00 〜</span>
-                    <div class="w-16 h-16 bg-brand-green-bg text-brand-green rounded-full flex items-center justify-center shadow-sm my-4">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 00 2 2z"/>
+                    <div class="w-20 h-20 bg-brand-green-bg rounded-full flex items-center justify-center my-4 relative">
+                        <!-- 手描きのカバンと太陽SVG -->
+                        <svg class="w-14 h-14 relative z-10" viewBox="0 0 64 64" fill="none">
+                            <circle cx="44" cy="20" r="8" fill="#FDF3CD" />
+                            <!-- カバンの主線 -->
+                            <rect x="16" y="32" width="32" height="20" rx="3" stroke="#4A3B32" stroke-width="2.5" fill="#E8F1F5" stroke-linejoin="round" />
+                            <path d="M24 32 V26 Q32 20 40 26 V32" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                            <!-- 太陽のピカピカ -->
+                            <path d="M44 8 V10 M44 30 V32 M32 20 H34 M54 20 H56" stroke="#D99B78" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
                     </div>
                     <h3 class="font-black text-lg text-brand-text mb-1">お昼の時間</h3>
@@ -620,12 +695,20 @@
                     <p class="text-xs text-brand-text/80 leading-relaxed font-medium">それぞれの通所施設や活動場所へ。自分らしく社会活動に取り組みます。</p>
                 </div>
 
-                <!-- Step 3: 夕方 -->
+                <!-- Step 3: 夕方 (手描きマグカップ) -->
                 <div class="relative bg-white p-6 rounded-3xl border border-[#ECE5DA] text-center flex flex-col items-center z-10 handwritten-border hover:shadow-md transition">
                     <span class="absolute -top-4 bg-brand-green text-white text-xs font-black px-4 py-1.5 rounded-full shadow-sm">PM 16:00 〜</span>
-                    <div class="w-16 h-16 bg-brand-green-bg text-brand-green rounded-full flex items-center justify-center shadow-sm my-4">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.168.477 4.5 1.253"/>
+                    <div class="w-20 h-20 bg-brand-green-bg rounded-full flex items-center justify-center my-4 relative">
+                        <!-- 手描きマグカップSVG -->
+                        <svg class="w-14 h-14 relative z-10" viewBox="0 0 64 64" fill="none">
+                            <ellipse cx="32" cy="46" rx="14" ry="4" fill="#D3EAD3" />
+                            <!-- コップ本体 -->
+                            <path d="M20 28 V46 C20 50, 44 50, 44 46 V28" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="#FAF6F0" />
+                            <!-- 持ち手 -->
+                            <path d="M44 32 Q52 35 44 42" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <!-- 湯気 -->
+                            <path d="M28 20 Q30 14 28 10" stroke="#4A3B32" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M34 22 Q36 16 34 12" stroke="#4A3B32" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
                     </div>
                     <h3 class="font-black text-lg text-brand-text mb-1">夕方の時間</h3>
@@ -633,12 +716,20 @@
                     <p class="text-xs text-brand-text/80 leading-relaxed font-medium">「おかえりなさい！」我が家に帰宅後は、入浴やおしゃべりでリラックス。</p>
                 </div>
 
-                <!-- Step 4: 夜 -->
+                <!-- Step 4: 夜 (手描きおねむの三日月) -->
                 <div class="relative bg-white p-6 rounded-3xl border border-[#ECE5DA] text-center flex flex-col items-center z-10 handwritten-border hover:shadow-md transition">
                     <span class="absolute -top-4 bg-brand-green text-white text-xs font-black px-4 py-1.5 rounded-full shadow-sm">PM 18:00 〜</span>
-                    <div class="w-16 h-16 bg-brand-green-bg text-brand-green rounded-full flex items-center justify-center shadow-sm my-4">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                    <div class="w-20 h-20 bg-brand-green-bg rounded-full flex items-center justify-center my-4 relative">
+                        <!-- 表情つき三日月とお星さまSVG -->
+                        <svg class="w-14 h-14 relative z-10" viewBox="0 0 64 64" fill="none">
+                            <!-- 月のぬり -->
+                            <path d="M20 44 C20 26, 32 14, 46 14 C36 18, 30 30, 34 44 C38 48, 44 48, 46 48 C32 52, 20 52, 20 44 Z" fill="#FDF3CD" />
+                            <!-- 月の手書き主線 -->
+                            <path d="M20 44 C20 26, 32 14, 46 14 C34 18, 30 30, 34 44 C32 48, 20 48, 20 44 Z" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <!-- おねむの目 -->
+                            <path d="M24 32 Q27 35 30 32" stroke="#4A3B32" stroke-width="2" stroke-linecap="round" />
+                            <!-- 小さなお星さま -->
+                            <path d="M46 32 L48 34 L51 32 L49 35 L46 32" stroke="#4A3B32" stroke-width="1.5" stroke-linecap="round" fill="#FAF6F0" />
                         </svg>
                     </div>
                     <h3 class="font-black text-lg text-brand-text mb-1">夜の時間</h3>
@@ -650,7 +741,7 @@
         </div>
     </section>
 
-    <!-- SECTION: RECRUIT -->
+    <!-- SECTION: RECRUIT (採用情報) -->
     <section id="recruit" class="py-20 lg:py-28 bg-white relative">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
@@ -695,11 +786,12 @@
         </div>
     </section>
 
-    <!-- SECTION: CONTACT / CTA -->
+    <!-- SECTION: CONTACT / CTA (お気軽にご相談ください) -->
     <section id="contact" class="py-12 bg-white relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="bg-brand-green-bg rounded-[3.5rem] p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-sm border border-brand-green/10">
+                <!-- 手書き風きらきらデコレーション -->
                 <div class="absolute top-4 right-8 w-16 h-16 text-brand-green/15 pointer-events-none float-sketch">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
@@ -724,11 +816,16 @@
                     <!-- Call & CTA Buttons Action -->
                     <div class="lg:col-span-6 flex flex-col gap-4 items-stretch lg:items-end">
                         
-                        <!-- Telephone Card -->
+                        <!-- Telephone Card (手描きの受話器) -->
                         <div class="bg-white p-6 rounded-3xl shadow-sm border border-[#EAE3D8] flex flex-col sm:flex-row items-center justify-between gap-4 w-full max-w-md">
                             <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 bg-brand-green-bg text-brand-green rounded-full flex items-center justify-center">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1.3 1.3 0 01-.321 1.15l-1.17 1.17a14.07 14.07 0 005.47 5.47l1.17-1.17a1.3 1.3 0 011.15-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                <div class="w-14 h-14 bg-brand-green-bg rounded-full flex items-center justify-center flex-shrink-0">
+                                    <!-- 手描きの愛らしい受話器SVG -->
+                                    <svg class="w-10 h-10" viewBox="0 0 48 48" fill="none">
+                                        <!-- 受話器の塗り -->
+                                        <path d="M10 12 Q14 6 20 10 L16 16 Q12 18 16 22 L26 32 Q30 36 32 32 L38 28 Q42 34 36 38 Q30 42 24 40 C14 36, 6 22, 10 12 Z" fill="#D3EAD3" />
+                                        <path d="M8 12 C12 6, 18 10, 18 10 L14 16 C11 18, 15 22, 15 22 L26 33 C26 33, 30 29, 32 31 L38 27 C38 27, 42 33, 36 37 C30 41, 24 40, 20 38 C12 34, 4 20, 8 12 Z" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
                                 </div>
                                 <div class="text-left">
                                     <p class="text-[10px] font-black text-brand-text/60 leading-none">お電話でのご相談・お問合せ</p>
@@ -741,12 +838,15 @@
                             </div>
                         </div>
 
-                        <!-- Email CTA (Full Width) -->
+                        <!-- Email CTA (LINEなし、フル幅の1ボタン配置) -->
                         <div class="flex flex-col sm:flex-row gap-3 w-full max-w-md font-bold">
-                            <!-- Email -->
+                            <!-- Email (手描き風の封筒と小鳥) -->
                             <a href="mailto:iyashiya.a1@gmail.com" class="w-full bg-white hover:bg-brand-beige border border-[#EAE3D8] text-brand-text py-4 px-6 rounded-2xl text-center shadow-sm text-xs flex items-center justify-center gap-2 transition transform hover:-translate-y-0.5">
-                                <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 00-2-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 00 2 2z"/></svg>
-                                メールでお問合せ
+                                <svg class="w-6 h-6" viewBox="0 0 32 32" fill="none">
+                                    <rect x="4" y="8" width="24" height="18" rx="2" stroke="#4A3B32" stroke-width="2" fill="#FDF3CD" />
+                                    <path d="M4 10 L16 20 L28 10" stroke="#4A3B32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                メールでお問合せ（iyashiya.a1@gmail.com）
                             </a>
                         </div>
 
