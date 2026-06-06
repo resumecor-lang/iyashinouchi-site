@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>障がい者グループホーム いやしのおうち | ほっとできる、もうひとつのうち。</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Zen Maru Gothic & Quicksand for cute Japanese and English) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#5B8C5A',       /* チラシの深緑 */
+                            'green-light': '#8BBF8A', /* 水彩の淡い黄緑 */
+                            'green-bg': '#EBF3EB',    /* 優しい背景の緑 */
+                            sky: '#D2E6F1',         /* ソラノイエから着想した澄んだ青空ブルー */
+                            'sky-light': '#F0F6FA',   /* 爽やかな空色の背景 */
+                            beige: '#FAF6F0',       /* 温かみのある地色 */
+                            text: '#4A3B32',        /* 手書き風の優しい茶色 */
+                            orange: '#D99B78'       /* アクセントのあたたかいオレンジ */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Zen Maru Gothic"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            color: #4A3B32;
+            background-color: #FCFAF7; /* チラシの優しい生成り色 */
+        }
+        
+        /* 手書き風の歪んだ角丸（チラシの水彩フレームの再現） */
+        .handwritten-border {
+            border: 3px solid #E6DFD5;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        }
+        
+        .handwritten-btn {
+            border-radius: 120px 20px 100px 25px/25px 100px 30px 120px;
+        }
+
+        /* ソラノイエ風のなだらかな「雲」や「水彩」のゆらぎ背景 */
+        .watercolor-blob-green {
+            border-radius: 48% 52% 50% 50% / 40% 45% 55% 60%;
+            background: radial-gradient(circle, rgba(235,243,235,1) 0%, rgba(215,233,215,0.8) 100%);
+        }
+
+        .watercolor-blob-sky {
+            border-radius: 52% 48% 55% 45% / 45% 42% 58% 55%;
+            background: radial-gradient(circle, rgba(226,240,247,1) 0%, rgba(200,224,237,0.8) 100%);
+        }
+
+        .watercolor-blob-pink {
+            border-radius: 45% 55% 48% 52% / 50% 45% 55% 50%;
+            background: radial-gradient(circle, rgba(252,237,235,1) 0%, rgba(249,215,210,0.8) 100%);
+        }
+
+        .watercolor-blob-yellow {
+            border-radius: 50% 50% 45% 55% / 55% 48% 52% 45%;
+            background: radial-gradient(circle, rgba(253,246,227,1) 0%, rgba(247,236,204,0.8) 100%);
+        }
+
+        /* 揺らぎアニメーション（手書き風の温かみをプラス） */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-6px) rotate(1.5deg); }
+        }
+        .float-sketch {
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes drift {
+            0%, 100% { border-radius: 48% 52% 50% 50% / 40% 45% 55% 60%; }
+            50% { border-radius: 52% 48% 55% 45% / 45% 40% 60 55%; }
+        }
+        .drift-bg {
+            animation: drift 10s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- HEADER -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 transition-all duration-300 border-b border-[#EAE3D8] py-1">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo & Brand Title -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="text-brand-green group-hover:scale-105 transition-transform duration-300 flex items-center">
+                    <!-- おうちと空をイメージしたロゴSVG -->
+                    <svg class="w-10 h-10" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 26 L32 8 L54 26 M16 22 V54 H48 V22" />
+                        <rect x="24" y="36" width="16" height="18" rx="2" />
+                        <path d="M12 14 A 4 4 0 1 1 18 18" stroke="currentColor" stroke-width="2" />
+                        <circle cx="46" cy="14" r="3" fill="#D99B78" stroke="none" />
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-[9px] text-brand-green font-bold tracking-widest leading-none">障がい者グループホーム</span>
+                    <span class="text-2xl font-black text-brand-text tracking-wider mt-0.5">いやしのおうち</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-bold">
+                <a href="#home" class="text-brand-green hover:opacity-80 transition relative py-2">ホーム<span class="absolute bottom-0 left-0 w-full h-0.5 bg-brand-green rounded-full"></span></a>
+                <a href="#about" class="text-brand-text hover:text-brand-green transition py-2">施設紹介</a>
+                <a href="#guide" class="text-brand-text hover:text-brand-green transition py-2">ご利用案内</a>
+                <a href="#daily" class="text-brand-text hover:text-brand-green transition py-2">1日の流れ</a>
+                <a href="#recruit" class="text-brand-text hover:text-brand-green transition py-2">採用情報</a>
+                <a href="#contact" class="text-brand-text hover:text-brand-green transition py-2">お問い合わせ</a>
+                
+                <!-- CTA Button -->
+                <a href="tel:080-6619-2027" class="bg-brand-green text-white hover:bg-brand-green-light px-5 py-3 rounded-full flex items-center gap-2 shadow-sm transition transform hover:-translate-y-0.5 font-black text-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 00-2-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 00 2 2z"/>
+                    </svg>
+                    見学・ご相談はこちら
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden p-2 text-brand-text hover:text-brand-green focus:outline-none" aria-label="メニューを開閉">
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white/95 border-t border-[#EAE3D8] transition duration-200">
+            <div class="px-4 pt-2 pb-6 space-y-2 font-bold text-center">
+                <a href="#home" class="block py-2.5 text-brand-green hover:bg-brand-green-bg rounded-lg">ホーム</a>
+                <a href="#about" class="block py-2.5 text-brand-text hover:bg-brand-green-bg rounded-lg">施設紹介</a>
+                <a href="#guide" class="block py-2.5 text-brand-text hover:bg-brand-green-bg rounded-lg">ご利用案内</a>
+                <a href="#daily" class="block py-2.5 text-brand-text hover:bg-brand-green-bg rounded-lg">1日の流れ</a>
+                <a href="#recruit" class="block py-2.5 text-brand-text hover:bg-brand-green-bg rounded-lg">採用情報</a>
+                <a href="#contact" class="block py-2.5 text-brand-text hover:bg-brand-green-bg rounded-lg">お問い合わせ</a>
+                <a href="tel:080-6619-2027" class="w-full bg-brand-green text-white py-3 rounded-full flex items-center justify-center gap-2 shadow mt-4 font-black">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1.3 1.3 0 01-.321 1.15l-1.17 1.17a14.07 14.07 0 005.47 5.47l1.17-1.17a1.3 1.3 0 011.15-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    <span>電話で見学・相談をする</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 bg-gradient-to-b from-[#FAF6F0] via-[#F4F8FA] to-[#FFFFFF]">
+        
+        <!-- 背景の装飾イラスト -->
+        <div class="absolute top-10 left-10 opacity-60 pointer-events-none hidden md:block float-sketch">
+            <svg class="w-24 h-16 text-brand-sky" viewBox="0 0 100 60" fill="currentColor">
+                <path d="M20 40a15 15 0 0 1 15-15 12 12 0 0 1 18-5 15 15 0 0 1 25 5 15 15 0 0 1 5 29h-63a15 15 0 0 1 0-14z"/>
+            </svg>
+        </div>
+        <div class="absolute bottom-20 left-6 opacity-30 pointer-events-none hidden lg:block float-sketch" style="animation-delay: 2s;">
+            <svg class="w-12 h-12 text-brand-green-light" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 5c-1.11-.08-2.23.19-3.21.75C16.81 3.4 14.12 1.95 11 2.5v1.03c2.44-.45 4.58.74 5.37 2.92-1.09-.45-2.27-.67-3.47-.63L11 6v1c1.55-.07 3.09.24 4.5.91l-1.6 1.6c-.66-.2-1.35-.29-2.04-.26L11 9.5v1.02c1.03-.04 2.05.15 3 .55l-2.4 2.4c-.5-.1-1-.15-1.5-.15-2.76 0-5 2.24-5 5h12c1.38 0 2.5-1.12 2.5-2.5 0-.74-.32-1.4-.83-1.85.54-1.08.83-2.27.83-3.48V5h-.1z"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-6 space-y-8">
+                    <div class="inline-flex items-center gap-2 bg-brand-green-bg text-brand-green font-bold text-sm px-4 py-2 rounded-full border border-brand-green/20">
+                        <span class="w-2.5 h-2.5 rounded-full bg-brand-green-light animate-ping"></span>
+                        障がい者グループホーム
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-5.5xl font-black text-brand-text leading-[1.3] sm:leading-[1.4] tracking-wider">
+                        ほっとできる、<br>
+                        <span class="relative inline-block mt-2">
+                            もうひとつのうち。
+                            <!-- 手描き波型アンダーライン -->
+                            <svg class="absolute left-0 -bottom-2 w-full h-3 text-brand-green-light/40" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                <path d="M0,5 Q25,0 50,5 T100,5" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-brand-text/90 leading-loose max-w-xl font-medium">
+                        木のぬくもりと、どこまでも広がる青空のような心地よさに包まれて、自分らしく暮らす。いやしのおおうちは、お一人おひとりのステップに寄り添う温かなホームです。
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-brand-green hover:bg-brand-green-light text-white font-black text-base px-8 py-4 rounded-full text-center shadow-md transition-all duration-300 flex items-center justify-center gap-2 transform hover:-translate-y-1 handwritten-btn">
+                            見学・体験のご予約
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                        <a href="#contact" class="bg-white border-2 border-[#DCD3C5] hover:bg-brand-beige text-brand-text font-black text-base px-8 py-4 rounded-full text-center transition-all duration-300 flex items-center justify-center gap-2 transform hover:-translate-y-1 handwritten-btn">
+                            お問い合わせ
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Video Frame -->
+                <div class="lg:col-span-6 relative flex justify-center">
+                    <div class="absolute -top-12 -right-8 w-36 h-36 text-brand-sky/40 pointer-events-none float-sketch">
+                        <svg viewBox="0 0 100 100" fill="currentColor">
+                            <path d="M50 15 C 55 35, 75 35, 75 50 C 75 65, 55 65, 50 85 C 45 65, 25 65, 25 50 C 25 35, 45 35, 50 15 Z" />
+                        </svg>
+                    </div>
+
+                    <!-- メイン動画コンテナ -->
+                    <div class="relative w-full max-w-lg z-10 p-3">
+                        <div class="overflow-hidden bg-[#FAF6F0] p-2 border-4 border-white shadow-2xl rounded-[2.5rem] transform rotate-1 hover:rotate-0 transition duration-500 handwritten-border">
+                            
+                            <!-- ルーム動画 -->
+                            <div class="relative w-full h-80 sm:h-96 rounded-[2rem] overflow-hidden bg-stone-100">
+                                <video 
+                                    class="w-full h-full object-cover" 
+                                    autoplay 
+                                    loop 
+                                    muted 
+                                    playsinline
+                                    poster="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800">
+                                    <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0227e339d67ba60da9b1d3d63b6b3e9&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+                                    ブラウザが動画の再生に対応していません。
+                                </video>
+                                <div class="absolute inset-0 bg-brand-green/5 pointer-events-none mix-blend-multiply"></div>
+                            </div>
+
+                        </div>
+
+                        <!-- 手描きおうちイラスト＆キャプション -->
+                        <div class="absolute -bottom-10 -right-4 w-48 bg-white/95 backdrop-blur-sm p-4 rounded-3xl shadow-xl border border-[#ECE5DA] text-center flex flex-col items-center transform rotate-2">
+                            <svg class="w-20 h-16 text-brand-orange" viewBox="0 0 64 50" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 25 L32 5 L59 25 M12 21 V48 H52 V21" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="22" y="32" width="10" height="16" rx="1" />
+                                <rect x="38" y="26" width="8" height="8" />
+                                <line x1="42" y1="26" x2="42" y2="34" />
+                                <line x1="38" y1="30" x2="46" y2="30" />
+                                <circle cx="16" cy="15" r="1" fill="currentColor" />
+                                <circle cx="48" cy="15" r="1" fill="currentColor" />
+                            </svg>
+                            <span class="text-xs font-black text-brand-text mt-1">安心のあたたかいおうち</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 水彩風の波型境界 -->
+        <div class="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-10 translate-y-1">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-12 text-white fill-current">
+                <path d="M0,0 C150,90 350,110 500,90 C650,70 900,100 1200,80 L1200,120 L0,120 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- SECTION: WHAT WE CHERISH -->
+    <section id="about" class="py-20 lg:py-28 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="flex items-center justify-center gap-1.5 text-brand-green font-bold text-sm mb-3">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                    </svg>
+                    <span>私たちが大切にしていること</span>
+                </div>
+                <h2 class="text-3.5xl sm:text-4xl font-black text-brand-text tracking-wider">
+                    施設ではなく「おうち」
+                </h2>
+                <svg class="w-24 h-2 mx-auto mt-3 text-brand-green-light" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <path d="M0,5 Q25,0 50,5 T100,5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 flex justify-center order-2 lg:order-1">
+                    <div class="bg-[#FAF8F5] p-5 rounded-3xl shadow-xl border border-[#ECE6DA] transform -rotate-2 hover:rotate-0 transition duration-300 max-w-sm handwritten-border">
+                        <div class="overflow-hidden rounded-2xl bg-white">
+                            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=80&w=800" alt="陽の光が差し込むリビングキッチン" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="pt-4 pb-2 text-center">
+                            <p class="font-bold text-brand-text text-sm">陽の光が差し込むリビング</p>
+                            <p class="text-xs text-brand-green font-semibold mt-1">#お互いが自然体でいられる空間</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-8 order-1 lg:order-2">
+                    <p class="text-lg sm:text-xl font-black text-brand-green leading-relaxed">
+                        ただ暮らす場所としての「施設」ではなく、毎日「ただいま」と帰りたくなる、温かな「おうち」でありたい。
+                    </p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 bg-brand-green-bg p-1.5 rounded-full text-brand-green flex-shrink-0">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-lg text-brand-text">毎日帰りたくなる場所。</h4>
+                                <p class="text-sm text-brand-text/80 mt-1">木のぬくもりとお互いの笑顔に包まれた、高い安心感に溢れる家を提供します。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 bg-brand-green-bg p-1.5 rounded-full text-brand-green flex-shrink-0">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-lg text-brand-text">ほっとひと息つける個室。</h4>
+                                <p class="text-sm text-brand-text/80 mt-1">周りを気にせず、じぶん時間を存分に満喰できるプライベートな個室をご用意しています。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 bg-brand-green-bg p-1.5 rounded-full text-brand-green flex-shrink-0">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-lg text-brand-text">笑顔と会話が生まれる場所。</h4>
+                                <p class="text-sm text-brand-text/80 mt-1">手作りの美味しいご飯を食べながら、日々のたわいもない会話に笑顔がこぼれます。</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <p class="text-base text-brand-text/90 leading-loose border-t border-[#ECE5DA] pt-6 font-medium">
+                        私たちは、利用者さま一人ひとりの「自分らしさ」と「生きがい」を尊重し、ソラノイエのように誰もが安心してのびのびと暮らせる住まいづくりを追求しています。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: FEATURES -->
+    <section id="features" class="py-20 lg:py-28 bg-[#FAF7F2] relative overflow-hidden">
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="flex items-center justify-center gap-1.5 text-brand-green font-bold text-sm mb-3">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    <span>いやしのおうちの特徴</span>
+                </div>
+                <h2 class="text-3.5xl sm:text-4xl font-black text-brand-text tracking-wider">
+                    4つのあたたかい特徴
+                </h2>
+                <svg class="w-24 h-2 mx-auto mt-3 text-brand-green-light" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <path d="M0,5 Q25,0 50,5 T100,5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Card 1: 木のぬくもり -->
+                <div class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center border border-[#ECE5DA]/40 transform hover:-translate-y-1">
+                    <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-green drift-bg text-brand-green">
+                        <svg class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-9 8.2z"/>
+                            <path d="M9 22v-4h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-black text-xl text-brand-text mb-3">木のぬくもり</h3>
+                    <p class="text-sm text-brand-text/85 leading-relaxed">
+                        自然を感じる温かな木目調の空間。まるでコテージのように、穏やかで落ち着く毎日をご提供します。
+                    </p>
+                </div>
+
+                <!-- Card 2: 全室個室 -->
+                <div class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center border border-[#ECE5DA]/40 transform hover:-translate-y-1">
+                    <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-sky drift-bg text-brand-green">
+                        <svg class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <path d="M9 22V12h6v10"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-black text-xl text-brand-text mb-3">全室個室</h3>
+                    <p class="text-sm text-brand-text/85 leading-relaxed">
+                        自分らしくのびのび過ごせるプライベート設計。安心で安全な、あなただけの快適な自由空間です。
+                    </p>
+                </div>
+
+                <!-- Card 3: 手づくりの食事 -->
+                <div class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center border border-[#ECE5DA]/40 transform hover:-translate-y-1">
+                    <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-pink drift-bg text-[#E07A70]">
+                        <svg class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            <path d="M12 2v4M12 18v4M3 12h18" opacity="0.2"/>
+                            <path d="M3 19h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/>
+                            <path d="M12 11c0 2-1 3-3 3M15 11c0 2 1 3 3 3"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-black text-xl text-brand-text mb-3">手づくりの食事</h3>
+                    <p class="text-sm text-brand-text/85 leading-relaxed">
+                        栄養バランスにこだわり、出来立てにこだわった手作り料理。健康的な食生活を温かくアシストします。
+                    </p>
+                </div>
+
+                <!-- Card 4: 安心のサポート -->
+                <div class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center border border-[#ECE5DA]/40 transform hover:-translate-y-1">
+                    <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-yellow drift-bg text-brand-orange">
+                        <svg class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-black text-xl text-brand-text mb-3">安心のサポート</h3>
+                    <p class="text-sm text-brand-text/85 leading-relaxed">
+                        専門スタッフが常に寄り添い、日常生活での見守りから緊急時まで親身になってサポートをいたします。
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: GUIDE -->
+    <section id="guide" class="py-20 lg:py-28 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="flex items-center justify-center gap-1.5 text-brand-green font-bold text-sm mb-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    <span>入居ご案内</span>
+                </div>
+                <h2 class="text-3.5xl sm:text-4xl font-black text-brand-text tracking-wider">
+                    ご利用手続き・料金案内
+                </h2>
+                <svg class="w-24 h-2 mx-auto mt-3 text-brand-green-light" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <path d="M0,5 Q25,0 50,5 T100,5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <!-- Double Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left: Target Audience -->
+                <div class="lg:col-span-5 bg-brand-sky-light/80 p-8 rounded-[2.5rem] border-2 border-brand-sky/40 relative">
+                    <div class="absolute -top-6 -right-6 text-brand-sky opacity-80 float-sketch">
+                        <svg class="w-16 h-12" viewBox="0 0 100 60" fill="currentColor">
+                            <path d="M20 40a15 15 0 0 1 15-15 12 12 0 0 1 18-5 15 15 0 0 1 25 5 15 15 0 0 1 5 29h-63a15 15 0 0 1 0-14z"/>
+                        </svg>
+                    </div>
+
+                    <h3 class="text-2xl font-black text-brand-text mb-6 flex items-center gap-2">
+                        <span class="text-brand-green">■</span> 対象となる方
+                    </h3>
+                    
+                    <ul class="space-y-4 font-bold text-brand-text/90">
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-green mt-1">✔</span>
+                            <span>18歳以上で知的障がい、精神障がい、または身体障がい等の区分認定を受けている方</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-green mt-1">✔</span>
+                            <span>共同生活援助（グループホーム）の支給決定を受けられる方</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-green mt-1">✔</span>
+                            <span>日中に就労支援事業所やデイケア、通所施設などに通うことが可能な方</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-green mt-1">✔</span>
+                            <span>生活保護を受給されている方も、安心してご利用いただけます</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8 pt-6 border-t border-brand-sky/60 text-xs text-brand-text/80 leading-relaxed font-medium">
+                        ※上記に該当するか分からない場合や、区分認定の申請中の方も、まずは一度お気軽にご相談ください。スタッフが申請サポート等も併せてご案内いたします。
+                    </div>
+                </div>
+
+                <!-- Right: Costs and Live Simulator -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="bg-brand-beige p-8 rounded-[2.5rem] border border-[#ECE5DA] handwritten-border">
+                        <h3 class="text-2xl font-black text-brand-text mb-4 flex items-center gap-2">
+                            <span class="text-brand-orange">■</span> ご利用料金（1か月あたり目安）
+                        </h3>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between items-center py-2 border-b border-dashed border-[#DCD3C5]">
+                                <span class="font-bold">家賃（特定障がい者特別給付費 適用前）</span>
+                                <span class="font-black text-lg">40,000円</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-dashed border-[#DCD3C5]">
+                                <span class="font-bold flex items-center gap-1">食材料費 <span class="text-xs font-normal text-brand-text/70">(朝食・夕食)</span></span>
+                                <span class="font-black text-lg">22,500円</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-dashed border-[#DCD3C5]">
+                                <span class="font-bold">光熱水費</span>
+                                <span class="font-black text-lg">13,000円</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-dashed border-[#DCD3C5]">
+                                <span class="font-bold">日用品費・その他</span>
+                                <span class="font-black text-lg">3,500円</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-dashed border-[#DCD3C5]">
+                                <span class="font-bold">修繕積立金</span>
+                                <span class="font-black text-lg">3,000円</span>
+                            </div>
+                        </div>
+
+                        <!-- インタラクティブ・シミュレーター -->
+                        <div class="bg-white p-6 rounded-2xl border-2 border-brand-green/30 space-y-4">
+                            <p class="font-black text-sm text-brand-green flex items-center gap-1.5">
+                                <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand-green"></span>
+                                給付金適用後の「実際の自己負担」シミュレーション
+                            </p>
+                            
+                            <div class="space-y-2">
+                                <label class="block text-xs font-black text-brand-text/80">家賃国庫補助（特定障害者特別給付費）の有無を選択</label>
+                                <select id="subsidy-select" class="w-full p-2.5 bg-brand-beige border border-[#DCD3C5] rounded-xl font-bold text-sm text-brand-text focus:outline-brand-green">
+                                    <option value="10000">受給あり（家賃1万円引きが適用されます）</option>
+                                    <option value="0">受給なし（一般枠・補助なし）</option>
+                                </select>
+                            </div>
+
+                            <div class="bg-brand-green-bg/60 p-4 rounded-xl flex items-center justify-between">
+                                <div class="text-left">
+                                    <p class="text-xs font-bold text-brand-text/70">給付金適用後のお支払い実質合計</p>
+                                    <p class="text-[10px] text-brand-green font-bold">※家賃補助を引いた実質的な負担額です</p>
+                                </div>
+                                <div class="text-right">
+                                    <span id="total-price" class="text-3xl font-black text-brand-green">72,000</span><span class="text-xs font-black text-brand-text ml-1">円/月</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Steps -->
+            <div class="mt-20">
+                <h3 class="text-center text-2xl font-black text-brand-text mb-12">入居までのあたたかい3ステップ</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                    <div class="bg-[#FCFAF7] p-8 rounded-3xl border border-[#ECE5DA] relative handwritten-border">
+                        <span class="text-4xl font-black text-brand-green-light/45 absolute top-4 right-6 font-mono">01</span>
+                        <h3 class="font-black text-xl text-brand-text mb-3">お問合せ・まずは見学</h3>
+                        <p class="text-sm text-brand-text/80 leading-relaxed font-medium">まずはお電話やフォームからお気軽に見学希望日をご連絡。お部屋や共有スペースの木の香りを直接感じてください。</p>
+                    </div>
+                    <div class="bg-[#FCFAF7] p-8 rounded-3xl border border-[#ECE5DA] relative handwritten-border">
+                        <span class="text-4xl font-black text-brand-green-light/45 absolute top-4 right-6 font-mono">02</span>
+                        <h3 class="font-black text-xl text-brand-text mb-3">安心の体験入居</h3>
+                        <p class="text-sm text-brand-text/80 leading-relaxed font-medium">数日〜数週間の体験利用が可能です。実際の美味しいご飯、暮らしの雰囲気、他メンバーとの団らんを体験して相性を見極められます。</p>
+                    </div>
+                    <div class="bg-[#FCFAF7] p-8 rounded-3xl border border-[#ECE5DA] relative handwritten-border">
+                        <span class="text-4xl font-black text-brand-green-light/45 absolute top-4 right-6 font-mono">03</span>
+                        <h3 class="font-black text-xl text-brand-text mb-3">ご契約・新生活の始まり</h3>
+                        <p class="text-sm text-brand-text/80 leading-relaxed font-medium">ご本人様、ご家族様とも十分にご納得をいただけましたら本入居の手続きを行い、いやしのおうちでの新しい安心生活がスタート！</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: DAILY ROUTINE -->
+    <section id="daily" class="py-20 lg:py-28 bg-[#FCFAF7] relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="flex items-center justify-center gap-1.5 text-brand-green font-bold text-sm mb-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <span>暮らしのイメージ</span>
+                </div>
+                <h2 class="text-3.5xl sm:text-4xl font-black text-brand-text tracking-wider">
+                    いやしのおうち、1日の流れ
+                </h2>
+                <svg class="w-24 h-2 mx-auto mt-3 text-brand-green-light" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <path d="M0,5 Q25,0 50,5 T100,5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <!-- Daily Flow Steps -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                
+                <div class="absolute top-1/4 left-[12%] right-[12%] h-0.5 border-t-2 border-dashed border-brand-green/35 hidden md:block z-0"></div>
+
+                <!-- Step 1: 朝 -->
+                <div class="relative bg-white p-6 rounded-3xl border border-[#ECE5DA] text-center flex flex-col items-center z-10 handwritten-border hover:shadow-md transition">
+                    <span class="absolute -top-4 bg-brand-green text-white text-xs font-black px-4 py-1.5 rounded-full shadow-sm">AM 7:00 〜</span>
+                    <div class="w-16 h-16 bg-brand-green-bg text-brand-green rounded-full flex items-center justify-center shadow-sm my-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 8H6c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-9c0-1.1-.9-2-2-2z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 8V5c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v3"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-black text-lg text-brand-text mb-1">朝の時間</h3>
+                    <p class="text-xs text-brand-green font-bold mb-3">朝食・身支度・通所準備</p>
+                    <p class="text-xs text-brand-text/80 leading-relaxed font-medium">おいしい朝食で、笑顔いっぱいの元気な一日をさわやかにスタート！</p>
+                </div>
+
+                <!-- Step 2: 昼 -->
+                <div class="relative bg-white p-6 rounded-3xl border border-[#ECE5DA] text-center flex flex-col items-center z-10 handwritten-border hover:shadow-md transition">
+                    <span class="absolute -top-4 bg-brand-green text-white text-xs font-black px-4 py-1.5 rounded-full shadow-sm">AM 9:00 〜</span>
+                    <div class="w-16 h-16 bg-brand-green-bg text-brand-green rounded-full flex items-center justify-center shadow-sm my-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 00 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-black text-lg text-brand-text mb-1">お昼の時間</h3>
+                    <p class="text-xs text-brand-green font-bold mb-3">就労支援・日中活動先へ</p>
+                    <p class="text-xs text-brand-text/80 leading-relaxed font-medium">それぞれの通所施設や活動場所へ。自分らしく社会活動に取り組みます。</p>
+                </div>
+
+                <!-- Step 3: 夕方 -->
+                <div class="relative bg-white p-6 rounded-3xl border border-[#ECE5DA] text-center flex flex-col items-center z-10 handwritten-border hover:shadow-md transition">
+                    <span class="absolute -top-4 bg-brand-green text-white text-xs font-black px-4 py-1.5 rounded-full shadow-sm">PM 16:00 〜</span>
+                    <div class="w-16 h-16 bg-brand-green-bg text-brand-green rounded-full flex items-center justify-center shadow-sm my-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.168.477 4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-black text-lg text-brand-text mb-1">夕方の時間</h3>
+                    <p class="text-xs text-brand-green font-bold mb-3">帰宅・自由時間</p>
+                    <p class="text-xs text-brand-text/80 leading-relaxed font-medium">「おかえりなさい！」我が家に帰宅後は、入浴やおしゃべりでリラックス。</p>
+                </div>
+
+                <!-- Step 4: 夜 -->
+                <div class="relative bg-white p-6 rounded-3xl border border-[#ECE5DA] text-center flex flex-col items-center z-10 handwritten-border hover:shadow-md transition">
+                    <span class="absolute -top-4 bg-brand-green text-white text-xs font-black px-4 py-1.5 rounded-full shadow-sm">PM 18:00 〜</span>
+                    <div class="w-16 h-16 bg-brand-green-bg text-brand-green rounded-full flex items-center justify-center shadow-sm my-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-black text-lg text-brand-text mb-1">夜の時間</h3>
+                    <p class="text-xs text-brand-green font-bold mb-3">夕食・団らん・就寝準備</p>
+                    <p class="text-xs text-brand-text/80 leading-relaxed font-medium">全員で手作りの夜ご飯。談話室でテレビを見たり過ごした後は、個室で就寝。</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: RECRUIT -->
+    <section id="recruit" class="py-20 lg:py-28 bg-white relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="flex items-center justify-center gap-1.5 text-brand-green font-bold text-sm mb-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    <span>採用情報</span>
+                </div>
+                <h2 class="text-3.5xl sm:text-4xl font-black text-brand-text tracking-wider">
+                    一緒に歩む、大切なスタッフ募集中
+                </h2>
+                <svg class="w-24 h-2 mx-auto mt-3 text-brand-green-light" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <path d="M0,5 Q25,0 50,5 T100,5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <div class="bg-[#FAF6F0] p-8 rounded-3xl border border-[#ECE5DA] relative handwritten-border space-y-6">
+                <p class="text-center font-bold text-lg text-brand-green leading-relaxed">
+                    「いやしのおうち」では、利用者さまが安心して暮らせる環境を一緒に創り上げる、あたたかい福祉介護スタッフ（世話人・支援員）を募集しています。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-semibold">
+                    <div class="bg-white p-5 rounded-2xl border border-[#ECE5DA]/40">
+                        <span class="font-black text-brand-green">募集職種：</span>生活支援員・世話人
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-[#ECE5DA]/40">
+                        <span class="font-black text-brand-green">勤務時間：</span>シフト制（夜勤あり・パート/アルバイト歓迎）
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-[#ECE5DA]/40">
+                        <span class="font-black text-brand-green">歓迎要件：</span>未経験・無資格の方歓迎、有資格者優遇あり
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-[#ECE5DA]/40">
+                        <span class="font-black text-brand-green">大切にすること：</span>笑顔で接し、寄り添う心
+                    </div>
+                </div>
+                <div class="text-center pt-4">
+                    <a href="#contact" class="inline-block bg-brand-green hover:bg-brand-green-light text-white font-black px-8 py-4 rounded-full shadow transition-transform transform hover:-translate-y-0.5 handwritten-btn text-base">
+                        採用の相談・応募をしてみる
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: CONTACT / CTA -->
+    <section id="contact" class="py-12 bg-white relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="bg-brand-green-bg rounded-[3.5rem] p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-sm border border-brand-green/10">
+                <div class="absolute top-4 right-8 w-16 h-16 text-brand-green/15 pointer-events-none float-sketch">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                    </svg>
+                </div>
+
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Text Info -->
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="inline-flex items-center gap-1 bg-white text-brand-green font-black text-xs px-4 py-2 rounded-full shadow-sm">
+                            見学・体験利用、ご家族からのご相談いつでも大歓迎です
+                        </div>
+                        <h2 class="text-3.5xl sm:text-4xl font-black text-brand-text leading-tight tracking-wider">
+                            お気軽にいつでも<br>ご相談ください 🍀
+                        </h2>
+                        <p class="text-sm sm:text-base text-brand-text/85 font-semibold leading-relaxed">
+                            「どんな暮らしなのか見てみたい」「体験入居のステップを詳しく聞きたい」など、些細なことでもお気軽にどうぞ。
+                        </p>
+                    </div>
+
+                    <!-- Call & CTA Buttons Action -->
+                    <div class="lg:col-span-6 flex flex-col gap-4 items-stretch lg:items-end">
+                        
+                        <!-- Telephone Card -->
+                        <div class="bg-white p-6 rounded-3xl shadow-sm border border-[#EAE3D8] flex flex-col sm:flex-row items-center justify-between gap-4 w-full max-w-md">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-brand-green-bg text-brand-green rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1.3 1.3 0 01-.321 1.15l-1.17 1.17a14.07 14.07 0 005.47 5.47l1.17-1.17a1.3 1.3 0 011.15-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-[10px] font-black text-brand-text/60 leading-none">お電話でのご相談・お問合せ</p>
+                                    <a href="tel:080-6619-2027" class="text-2.5xl sm:text-3xl font-black text-brand-green hover:underline">080-6619-2027</a>
+                                </div>
+                            </div>
+                            <div class="text-center sm:text-right text-xs font-black text-brand-text/70 mt-1 sm:mt-0">
+                                <p>受付 9:00〜18:00</p>
+                                <p class="text-[10px] text-brand-green">(年中無休)</p>
+                            </div>
+                        </div>
+
+                        <!-- Email CTA (Full Width) -->
+                        <div class="flex flex-col sm:flex-row gap-3 w-full max-w-md font-bold">
+                            <!-- Email -->
+                            <a href="mailto:iyashiya.a1@gmail.com" class="w-full bg-white hover:bg-brand-beige border border-[#EAE3D8] text-brand-text py-4 px-6 rounded-2xl text-center shadow-sm text-xs flex items-center justify-center gap-2 transition transform hover:-translate-y-0.5">
+                                <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 00-2-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 00 2 2z"/></svg>
+                                メールでお問合せ
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#2E251F] text-white/90 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-white/10 items-start">
+                
+                <!-- Left Brand & Address info -->
+                <div class="md:col-span-6 space-y-4">
+                    <div class="flex items-center gap-2 text-white">
+                        <svg class="w-8 h-8 text-brand-green-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        </svg>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] text-brand-green-light font-bold leading-none">障がい者グループホーム</span>
+                            <span class="text-xl font-black mt-0.5">いやしのおうち</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-xs text-white/70 max-w-md leading-relaxed font-light">
+                        「いやしのおうち」は、木のぬくもりとお互いの存在に包まれながら、自立に向けた新しいスタートを温かく、親身に支援するグループホームです。
+                    </p>
+
+                    <div class="text-xs text-white/80 space-y-1.5 pt-2">
+                        <p class="font-bold">📍 所在地</p>
+                        <p>〒574-0011 大阪府大東市北条5-8-31</p>
+                    </div>
+                </div>
+
+                <!-- Right Quick Links & SNS -->
+                <div class="md:col-span-6 flex flex-col sm:flex-row sm:justify-end gap-12 text-sm font-bold">
+                    <div class="space-y-3">
+                        <p class="font-black text-brand-green-light border-l-2 border-brand-green-light pl-2">クイックメニュー</p>
+                        <ul class="space-y-2 text-white/80 font-normal">
+                            <li><a href="#home" class="hover:text-brand-green-light transition">ホーム</a></li>
+                            <li><a href="#about" class="hover:text-brand-green-light transition">施設紹介</a></li>
+                            <li><a href="#guide" class="hover:text-brand-green-light transition">ご利用案内</a></li>
+                            <li><a href="#daily" class="hover:text-brand-green-light transition">1日の流れ</a></li>
+                            <li><a href="#recruit" class="hover:text-brand-green-light transition">採用情報</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-4">
+                        <p class="font-black text-brand-green-light border-l-2 border-brand-green-light pl-2">SNS公式アカウント</p>
+                        <div class="flex items-center gap-3">
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] rounded-full flex items-center justify-center transition group" aria-label="Instagram">
+                                <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 text-center text-xs text-white/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>© 2026 Iyashi no Ouchi All Rights Reserved.</p>
+                <p class="font-light">Designed with Warmth & Sky 🏡🌤</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Responsive Hamburger Menu & Fee Calculator Scripts -->
+    <script>
+        // 1. Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        menuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            if (isOpen) {
+                mobileMenu.classList.add('hidden');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            } else {
+                mobileMenu.classList.remove('hidden');
+                hamburgerIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            }
+        });
+
+        // Auto close menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+
+        // 2. Interactive Cost Simulator
+        const subsidySelect = document.getElementById('subsidy-select');
+        const totalPriceEl = document.getElementById('total-price');
+
+        const BASE_ADDITIONAL_COST = 42000;
+        const RENT_PRICE = 40000;
+
+        function updateSimulation() {
+            const subsidy = parseInt(subsidySelect.value, 10);
+            const actualRent = Math.max(0, RENT_PRICE - subsidy);
+            const total = actualRent + BASE_ADDITIONAL_COST;
+            
+            totalPriceEl.textContent = total.toLocaleString();
+        }
+
+        subsidySelect.addEventListener('change', updateSimulation);
+        updateSimulation();
+    </script>
+</body>
+</html>
