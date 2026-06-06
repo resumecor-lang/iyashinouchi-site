@@ -83,7 +83,7 @@
 
         @keyframes drift {
             0%, 100% { border-radius: 48% 52% 50% 50% / 40% 45% 55% 60%; }
-            50% { border-radius: 52% 48% 55% 45% / 45% 40% 60% 55%; }
+            50% { border-radius: 52% 48% 55% 45% / 45% 40% 60 55%; }
         }
         .drift-bg {
             animation: drift 10s ease-in-out infinite;
@@ -92,7 +92,7 @@
 </head>
 <body class="overflow-x-hidden">
 
-    <!-- HEADER (チラシ×ソラノイエ仕様：澄み渡る空気感を演出) -->
+    <!-- HEADER -->
     <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 transition-all duration-300 border-b border-[#EAE3D8] py-1">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Logo & Brand Title -->
@@ -102,7 +102,6 @@
                     <svg class="w-10 h-10" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M10 26 L32 8 L54 26 M16 22 V54 H48 V22" />
                         <rect x="24" y="36" width="16" height="18" rx="2" />
-                        <!-- ソラノイエ風の「太陽と雲」のあしらい -->
                         <path d="M12 14 A 4 4 0 1 1 18 18" stroke="currentColor" stroke-width="2" />
                         <circle cx="46" cy="14" r="3" fill="#D99B78" stroke="none" />
                     </svg>
@@ -113,7 +112,7 @@
                 </div>
             </a>
 
-            <!-- Desktop Menu (チラシの並び順と完全一致) -->
+            <!-- Desktop Menu -->
             <nav class="hidden lg:flex items-center gap-7 text-sm font-bold">
                 <a href="#home" class="text-brand-green hover:opacity-80 transition relative py-2">ホーム<span class="absolute bottom-0 left-0 w-full h-0.5 bg-brand-green rounded-full"></span></a>
                 <a href="#about" class="text-brand-text hover:text-brand-green transition py-2">施設紹介</a>
@@ -123,7 +122,7 @@
                 <a href="#contact" class="text-brand-text hover:text-brand-green transition py-2">お問い合わせ</a>
                 
                 <!-- CTA Button -->
-                <a href="tel:080-4926-1113" class="bg-brand-green text-white hover:bg-brand-green-light px-5 py-3 rounded-full flex items-center gap-2 shadow-sm transition transform hover:-translate-y-0.5 font-black text-xs">
+                <a href="tel:080-6619-2027" class="bg-brand-green text-white hover:bg-brand-green-light px-5 py-3 rounded-full flex items-center gap-2 shadow-sm transition transform hover:-translate-y-0.5 font-black text-xs">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 00-2-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 00 2 2z"/>
                     </svg>
@@ -151,7 +150,7 @@
                 <a href="#daily" class="block py-2.5 text-brand-text hover:bg-brand-green-bg rounded-lg">1日の流れ</a>
                 <a href="#recruit" class="block py-2.5 text-brand-text hover:bg-brand-green-bg rounded-lg">採用情報</a>
                 <a href="#contact" class="block py-2.5 text-brand-text hover:bg-brand-green-bg rounded-lg">お問い合わせ</a>
-                <a href="tel:080-4926-1113" class="w-full bg-brand-green text-white py-3 rounded-full flex items-center justify-center gap-2 shadow mt-4 font-black">
+                <a href="tel:080-6619-2027" class="w-full bg-brand-green text-white py-3 rounded-full flex items-center justify-center gap-2 shadow mt-4 font-black">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1.3 1.3 0 01-.321 1.15l-1.17 1.17a14.07 14.07 0 005.47 5.47l1.17-1.17a1.3 1.3 0 011.15-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                     <span>電話で見学・相談をする</span>
                 </a>
@@ -159,17 +158,16 @@
         </div>
     </header>
 
-    <!-- HERO SECTION (動画が心地よく流れる手書き水彩フレーム×青空の浮遊感) -->
+    <!-- HERO SECTION -->
     <section id="home" class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 bg-gradient-to-b from-[#FAF6F0] via-[#F4F8FA] to-[#FFFFFF]">
         
-        <!-- 背景の青空＆雲の装飾イラスト (ソラノイエ風の爽やかさ) -->
+        <!-- 背景の装飾イラスト -->
         <div class="absolute top-10 left-10 opacity-60 pointer-events-none hidden md:block float-sketch">
             <svg class="w-24 h-16 text-brand-sky" viewBox="0 0 100 60" fill="currentColor">
                 <path d="M20 40a15 15 0 0 1 15-15 12 12 0 0 1 18-5 15 15 0 0 1 25 5 15 15 0 0 1 5 29h-63a15 15 0 0 1 0-14z"/>
             </svg>
         </div>
         <div class="absolute bottom-20 left-6 opacity-30 pointer-events-none hidden lg:block float-sketch" style="animation-delay: 2s;">
-            <!-- 飛んでいるかわいい小鳥 -->
             <svg class="w-12 h-12 text-brand-green-light" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M21 5c-1.11-.08-2.23.19-3.21.75C16.81 3.4 14.12 1.95 11 2.5v1.03c2.44-.45 4.58.74 5.37 2.92-1.09-.45-2.27-.67-3.47-.63L11 6v1c1.55-.07 3.09.24 4.5.91l-1.6 1.6c-.66-.2-1.35-.29-2.04-.26L11 9.5v1.02c1.03-.04 2.05.15 3 .55l-2.4 2.4c-.5-.1-1-.15-1.5-.15-2.76 0-5 2.24-5 5h12c1.38 0 2.5-1.12 2.5-2.5 0-.74-.32-1.4-.83-1.85.54-1.08.83-2.27.83-3.48V5h-.1z"/>
             </svg>
@@ -197,7 +195,7 @@
                     </h1>
 
                     <p class="text-base sm:text-lg text-brand-text/90 leading-loose max-w-xl font-medium">
-                        木のぬくもりと、どこまでも広がる青空のような心地よさに包まれて、自分らしく暮らす。いやしのおうちは、お一人おひとりのステップに寄り添う温かなホームです。
+                        木のぬくもりと、どこまでも広がる青空のような心地よさに包まれて、自分らしく暮らす。いやしのおおうちは、お一人おひとりのステップに寄り添う温かなホームです。
                     </p>
 
                     <!-- CTAs -->
@@ -213,21 +211,19 @@
                     </div>
                 </div>
 
-                <!-- Right Video Frame (手書き水彩フレームに包まれたおうちのヒーロー動画) -->
+                <!-- Right Video Frame -->
                 <div class="lg:col-span-6 relative flex justify-center">
-                    
-                    <!-- 水彩調の空色のアートSVG -->
                     <div class="absolute -top-12 -right-8 w-36 h-36 text-brand-sky/40 pointer-events-none float-sketch">
                         <svg viewBox="0 0 100 100" fill="currentColor">
                             <path d="M50 15 C 55 35, 75 35, 75 50 C 75 65, 55 65, 50 85 C 45 65, 25 65, 25 50 C 25 35, 45 35, 50 15 Z" />
                         </svg>
                     </div>
 
-                    <!-- メイン動画コンテナ (手書き水彩フレーム) -->
+                    <!-- メイン動画コンテナ -->
                     <div class="relative w-full max-w-lg z-10 p-3">
                         <div class="overflow-hidden bg-[#FAF6F0] p-2 border-4 border-white shadow-2xl rounded-[2.5rem] transform rotate-1 hover:rotate-0 transition duration-500 handwritten-border">
                             
-                            <!-- 心地よいルーム動画 -->
+                            <!-- ルーム動画 -->
                             <div class="relative w-full h-80 sm:h-96 rounded-[2rem] overflow-hidden bg-stone-100">
                                 <video 
                                     class="w-full h-full object-cover" 
@@ -235,7 +231,7 @@
                                     loop 
                                     muted 
                                     playsinline
-                                    poster="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=800">
+                                    poster="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800">
                                     <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0227e339d67ba60da9b1d3d63b6b3e9&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
                                     ブラウザが動画の再生に対応していません。
                                 </video>
@@ -244,9 +240,8 @@
 
                         </div>
 
-                        <!-- 手描きおうちイラスト＆キャプション（チラシ右下の可愛いおうちを再現） -->
+                        <!-- 手描きおうちイラスト＆キャプション -->
                         <div class="absolute -bottom-10 -right-4 w-48 bg-white/95 backdrop-blur-sm p-4 rounded-3xl shadow-xl border border-[#ECE5DA] text-center flex flex-col items-center transform rotate-2">
-                            <!-- 手書きおうちSVG -->
                             <svg class="w-20 h-16 text-brand-orange" viewBox="0 0 64 50" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 25 L32 5 L59 25 M12 21 V48 H52 V21" stroke-linecap="round" stroke-linejoin="round"/>
                                 <rect x="22" y="32" width="10" height="16" rx="1" />
@@ -272,11 +267,10 @@
         </div>
     </section>
 
-    <!-- SECTION: WHAT WE CHERISH 私たちが大切にしていること -->
+    <!-- SECTION: WHAT WE CHERISH -->
     <section id="about" class="py-20 lg:py-28 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
             
-            <!-- Section Header -->
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <div class="flex items-center justify-center gap-1.5 text-brand-green font-bold text-sm mb-3">
                     <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -287,7 +281,6 @@
                 <h2 class="text-3.5xl sm:text-4xl font-black text-brand-text tracking-wider">
                     施設ではなく「おうち」
                 </h2>
-                <!-- 手書き波線 -->
                 <svg class="w-24 h-2 mx-auto mt-3 text-brand-green-light" viewBox="0 0 100 10" preserveAspectRatio="none">
                     <path d="M0,5 Q25,0 50,5 T100,5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
                 </svg>
@@ -295,11 +288,10 @@
 
             <!-- Content Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- Left: Polaroid Style Photo -->
                 <div class="lg:col-span-5 flex justify-center order-2 lg:order-1">
                     <div class="bg-[#FAF8F5] p-5 rounded-3xl shadow-xl border border-[#ECE6DA] transform -rotate-2 hover:rotate-0 transition duration-300 max-w-sm handwritten-border">
                         <div class="overflow-hidden rounded-2xl bg-white">
-                            <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=800" alt="陽の光が差し込むお部屋" class="w-full h-64 object-cover">
+                            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=80&w=800" alt="陽の光が差し込むリビングキッチン" class="w-full h-64 object-cover">
                         </div>
                         <div class="pt-4 pb-2 text-center">
                             <p class="font-bold text-brand-text text-sm">陽の光が差し込むリビング</p>
@@ -308,7 +300,6 @@
                     </div>
                 </div>
 
-                <!-- Right: Values & Bullet Points -->
                 <div class="lg:col-span-7 space-y-8 order-1 lg:order-2">
                     <p class="text-lg sm:text-xl font-black text-brand-green leading-relaxed">
                         ただ暮らす場所としての「施設」ではなく、毎日「ただいま」と帰りたくなる、温かな「おうち」でありたい。
@@ -330,7 +321,7 @@
                             </div>
                             <div>
                                 <h4 class="font-black text-lg text-brand-text">ほっとひと息つける個室。</h4>
-                                <p class="text-sm text-brand-text/80 mt-1">周りを気にせず、じぶん時間を存分に満喫できるプライベートな個室をご用意しています。</p>
+                                <p class="text-sm text-brand-text/80 mt-1">周りを気にせず、じぶん時間を存分に満喰できるプライベートな個室をご用意しています。</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
@@ -353,12 +344,11 @@
         </div>
     </section>
 
-    <!-- SECTION: FEATURES いやしのおうちの特徴 (水彩調の美しい丸フレームデザイン) -->
+    <!-- SECTION: FEATURES -->
     <section id="features" class="py-20 lg:py-28 bg-[#FAF7F2] relative overflow-hidden">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Section Header -->
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <div class="flex items-center justify-center gap-1.5 text-brand-green font-bold text-sm mb-3">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -374,10 +364,9 @@
                 </svg>
             </div>
 
-            <!-- Features Cards Grid (チラシの美しい水彩丸デザインを再現) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 
-                <!-- Card 1: 木のぬくもり (Green watercolor) -->
+                <!-- Card 1: 木のぬくもり -->
                 <div class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center border border-[#ECE5DA]/40 transform hover:-translate-y-1">
                     <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-green drift-bg text-brand-green">
                         <svg class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -391,7 +380,7 @@
                     </p>
                 </div>
 
-                <!-- Card 2: 全室個室 (Sky watercolor - ソラノイエテイスト) -->
+                <!-- Card 2: 全室個室 -->
                 <div class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center border border-[#ECE5DA]/40 transform hover:-translate-y-1">
                     <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-sky drift-bg text-brand-green">
                         <svg class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -405,7 +394,7 @@
                     </p>
                 </div>
 
-                <!-- Card 3: 手づくりの食事 (Pink watercolor) -->
+                <!-- Card 3: 手づくりの食事 -->
                 <div class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center border border-[#ECE5DA]/40 transform hover:-translate-y-1">
                     <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-pink drift-bg text-[#E07A70]">
                         <svg class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -421,7 +410,7 @@
                     </p>
                 </div>
 
-                <!-- Card 4: 安心のサポート (Yellow watercolor) -->
+                <!-- Card 4: 安心のサポート -->
                 <div class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center border border-[#ECE5DA]/40 transform hover:-translate-y-1">
                     <div class="w-28 h-28 flex items-center justify-center mb-6 watercolor-blob-yellow drift-bg text-brand-orange">
                         <svg class="w-14 h-14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -438,11 +427,10 @@
         </div>
     </section>
 
-    <!-- SECTION: GUIDE ご利用案内 (ソラノイエ #b の情報を昇華させたハイパーセクション) -->
+    <!-- SECTION: GUIDE -->
     <section id="guide" class="py-20 lg:py-28 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Section Header -->
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <div class="flex items-center justify-center gap-1.5 text-brand-green font-bold text-sm mb-3">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -458,12 +446,11 @@
                 </svg>
             </div>
 
-            <!-- Double Grid: 対象者 & 料金プラン -->
+            <!-- Double Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 
-                <!-- Left: Target Audience (対象となる方) -->
+                <!-- Left: Target Audience -->
                 <div class="lg:col-span-5 bg-brand-sky-light/80 p-8 rounded-[2.5rem] border-2 border-brand-sky/40 relative">
-                    <!-- 雲のデコレーション -->
                     <div class="absolute -top-6 -right-6 text-brand-sky opacity-80 float-sketch">
                         <svg class="w-16 h-12" viewBox="0 0 100 60" fill="currentColor">
                             <path d="M20 40a15 15 0 0 1 15-15 12 12 0 0 1 18-5 15 15 0 0 1 25 5 15 15 0 0 1 5 29h-63a15 15 0 0 1 0-14z"/>
@@ -498,14 +485,13 @@
                     </div>
                 </div>
 
-                <!-- Right: Costs and Live Simulator (ご利用料金シミュレーター) -->
+                <!-- Right: Costs and Live Simulator -->
                 <div class="lg:col-span-7 space-y-6">
                     <div class="bg-brand-beige p-8 rounded-[2.5rem] border border-[#ECE5DA] handwritten-border">
                         <h3 class="text-2xl font-black text-brand-text mb-4 flex items-center gap-2">
                             <span class="text-brand-orange">■</span> ご利用料金（1か月あたり目安）
                         </h3>
                         
-                        <!-- 料金内訳 -->
                         <div class="space-y-3 mb-6">
                             <div class="flex justify-between items-center py-2 border-b border-dashed border-[#DCD3C5]">
                                 <span class="font-bold">家賃（特定障がい者特別給付費 適用前）</span>
@@ -529,7 +515,7 @@
                             </div>
                         </div>
 
-                        <!-- インタラクティブ・シミュレーター (家族が最も助かる機能) -->
+                        <!-- インタラクティブ・シミュレーター -->
                         <div class="bg-white p-6 rounded-2xl border-2 border-brand-green/30 space-y-4">
                             <p class="font-black text-sm text-brand-green flex items-center gap-1.5">
                                 <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand-green"></span>
@@ -560,7 +546,7 @@
 
             </div>
 
-            <!-- Steps (入居までの具体的な流れ) -->
+            <!-- Steps -->
             <div class="mt-20">
                 <h3 class="text-center text-2xl font-black text-brand-text mb-12">入居までのあたたかい3ステップ</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
@@ -585,11 +571,10 @@
         </div>
     </section>
 
-    <!-- SECTION: DAILY ROUTINE 1日の流れ -->
+    <!-- SECTION: DAILY ROUTINE -->
     <section id="daily" class="py-20 lg:py-28 bg-[#FCFAF7] relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Section Header -->
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <div class="flex items-center justify-center gap-1.5 text-brand-green font-bold text-sm mb-3">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -608,7 +593,7 @@
                 
                 <div class="absolute top-1/4 left-[12%] right-[12%] h-0.5 border-t-2 border-dashed border-brand-green/35 hidden md:block z-0"></div>
 
-                <!-- Step 1: 朝 (Morning) -->
+                <!-- Step 1: 朝 -->
                 <div class="relative bg-white p-6 rounded-3xl border border-[#ECE5DA] text-center flex flex-col items-center z-10 handwritten-border hover:shadow-md transition">
                     <span class="absolute -top-4 bg-brand-green text-white text-xs font-black px-4 py-1.5 rounded-full shadow-sm">AM 7:00 〜</span>
                     <div class="w-16 h-16 bg-brand-green-bg text-brand-green rounded-full flex items-center justify-center shadow-sm my-4">
@@ -622,7 +607,7 @@
                     <p class="text-xs text-brand-text/80 leading-relaxed font-medium">おいしい朝食で、笑顔いっぱいの元気な一日をさわやかにスタート！</p>
                 </div>
 
-                <!-- Step 2: 昼 (Daytime) -->
+                <!-- Step 2: 昼 -->
                 <div class="relative bg-white p-6 rounded-3xl border border-[#ECE5DA] text-center flex flex-col items-center z-10 handwritten-border hover:shadow-md transition">
                     <span class="absolute -top-4 bg-brand-green text-white text-xs font-black px-4 py-1.5 rounded-full shadow-sm">AM 9:00 〜</span>
                     <div class="w-16 h-16 bg-brand-green-bg text-brand-green rounded-full flex items-center justify-center shadow-sm my-4">
@@ -635,7 +620,7 @@
                     <p class="text-xs text-brand-text/80 leading-relaxed font-medium">それぞれの通所施設や活動場所へ。自分らしく社会活動に取り組みます。</p>
                 </div>
 
-                <!-- Step 3: 夕方 (Evening) -->
+                <!-- Step 3: 夕方 -->
                 <div class="relative bg-white p-6 rounded-3xl border border-[#ECE5DA] text-center flex flex-col items-center z-10 handwritten-border hover:shadow-md transition">
                     <span class="absolute -top-4 bg-brand-green text-white text-xs font-black px-4 py-1.5 rounded-full shadow-sm">PM 16:00 〜</span>
                     <div class="w-16 h-16 bg-brand-green-bg text-brand-green rounded-full flex items-center justify-center shadow-sm my-4">
@@ -648,7 +633,7 @@
                     <p class="text-xs text-brand-text/80 leading-relaxed font-medium">「おかえりなさい！」我が家に帰宅後は、入浴やおしゃべりでリラックス。</p>
                 </div>
 
-                <!-- Step 4: 夜 (Night) -->
+                <!-- Step 4: 夜 -->
                 <div class="relative bg-white p-6 rounded-3xl border border-[#ECE5DA] text-center flex flex-col items-center z-10 handwritten-border hover:shadow-md transition">
                     <span class="absolute -top-4 bg-brand-green text-white text-xs font-black px-4 py-1.5 rounded-full shadow-sm">PM 18:00 〜</span>
                     <div class="w-16 h-16 bg-brand-green-bg text-brand-green rounded-full flex items-center justify-center shadow-sm my-4">
@@ -665,7 +650,7 @@
         </div>
     </section>
 
-    <!-- SECTION: RECRUIT 採用情報 -->
+    <!-- SECTION: RECRUIT -->
     <section id="recruit" class="py-20 lg:py-28 bg-white relative">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
@@ -710,7 +695,7 @@
         </div>
     </section>
 
-    <!-- SECTION: CONTACT / CTA まずはお気軽にご相談ください -->
+    <!-- SECTION: CONTACT / CTA -->
     <section id="contact" class="py-12 bg-white relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
@@ -747,7 +732,7 @@
                                 </div>
                                 <div class="text-left">
                                     <p class="text-[10px] font-black text-brand-text/60 leading-none">お電話でのご相談・お問合せ</p>
-                                    <a href="tel:080-4926-1113" class="text-2.5xl sm:text-3xl font-black text-brand-green hover:underline">080-4926-1113</a>
+                                    <a href="tel:080-6619-2027" class="text-2.5xl sm:text-3xl font-black text-brand-green hover:underline">080-6619-2027</a>
                                 </div>
                             </div>
                             <div class="text-center sm:text-right text-xs font-black text-brand-text/70 mt-1 sm:mt-0">
@@ -756,19 +741,12 @@
                             </div>
                         </div>
 
-                        <!-- Email & LINE CTAs -->
+                        <!-- Email CTA (Full Width) -->
                         <div class="flex flex-col sm:flex-row gap-3 w-full max-w-md font-bold">
                             <!-- Email -->
-                            <a href="mailto:info@iyashi-no-ouchi.example.com" class="flex-1 bg-white hover:bg-brand-beige border border-[#EAE3D8] text-brand-text py-4 px-6 rounded-2xl text-center shadow-sm text-xs flex items-center justify-center gap-2 transition transform hover:-translate-y-0.5">
+                            <a href="mailto:iyashiya.a1@gmail.com" class="w-full bg-white hover:bg-brand-beige border border-[#EAE3D8] text-brand-text py-4 px-6 rounded-2xl text-center shadow-sm text-xs flex items-center justify-center gap-2 transition transform hover:-translate-y-0.5">
                                 <svg class="w-5 h-5 text-brand-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 00-2-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 00 2 2z"/></svg>
                                 メールでお問合せ
-                            </a>
-                            <!-- LINE -->
-                            <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="flex-1 bg-[#06C755] hover:bg-[#05b04b] text-white py-4 px-6 rounded-2xl text-center shadow-sm text-xs flex items-center justify-center gap-2 transition transform hover:-translate-y-0.5">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M24 10.3c0-5.24-5.38-9.5-12-9.5S0 5.06 0 10.3c0 4.7 4.28 8.62 10.07 9.36.39.08.93.26 1.06.6l.38 1.6c.12.5.42 1.33-.2 1.95-.5.5-.38.12-.13-.24l2.43-3.6c.64-.1 1.25-.26 1.83-.48 5.25-1.12 8.56-4.9 8.56-9.19z"/>
-                                </svg>
-                                LINEで相談する
                             </a>
                         </div>
 
@@ -803,8 +781,7 @@
 
                     <div class="text-xs text-white/80 space-y-1.5 pt-2">
                         <p class="font-bold">📍 所在地</p>
-                        <p>〒674-0064 兵庫県明石市大久保町江井島1699-1</p>
-                        <p class="text-white/60">おおくぼ新和ビル 202号室</p>
+                        <p>〒574-0011 大阪府大東市北条5-8-31</p>
                     </div>
                 </div>
 
@@ -876,27 +853,22 @@
             });
         });
 
-        // 2. Interactive Cost Simulator (Sora no Ie inspired)
+        // 2. Interactive Cost Simulator
         const subsidySelect = document.getElementById('subsidy-select');
         const totalPriceEl = document.getElementById('total-price');
 
-        // Base price constant: 食材料費(22500) + 光熱水費(13000) + 日用品(3500) + 修繕(3000) = 42000
         const BASE_ADDITIONAL_COST = 42000;
         const RENT_PRICE = 40000;
 
         function updateSimulation() {
             const subsidy = parseInt(subsidySelect.value, 10);
-            // Actual rent paid is (Rent - Subsidy)
             const actualRent = Math.max(0, RENT_PRICE - subsidy);
             const total = actualRent + BASE_ADDITIONAL_COST;
             
-            // Format number and update DOM
             totalPriceEl.textContent = total.toLocaleString();
         }
 
         subsidySelect.addEventListener('change', updateSimulation);
-        
-        // Initial call to set total price correctly
         updateSimulation();
     </script>
 </body>
