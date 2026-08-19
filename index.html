@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>障がい者グループホーム いやしのおうち | ほっとできる、もうひとつのうち。</title>
+    <title>女性専用グループホーム いやしのおうち | ほっとできる、もうひとつのうち。</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts (Zen Maru Gothic for warm, soft Japanese layout) -->
@@ -89,6 +89,19 @@
         .drift-bg {
             animation: drift 10s ease-in-out infinite;
         }
+
+        /* 丸ゴシックは900でも細く見えるため、タイトル・見出しだけ線を足して太くする */
+        h1, h2, h3, h4 {
+            font-weight: 900;
+            -webkit-text-stroke: 0.7px currentColor;
+            letter-spacing: 0.06em;
+        }
+        h1 { -webkit-text-stroke: 0.95px currentColor; }
+        .brand-title {
+            font-weight: 900;
+            -webkit-text-stroke: 0.8px currentColor;
+            letter-spacing: 0.08em;
+        }
     </style>
 </head>
 <body class="overflow-x-hidden text-lg"> <!-- 全体の標準サイズを text-lg (18px相当) に引き上げ -->
@@ -113,8 +126,8 @@
                     </svg>
                 </div>
                 <div class="flex flex-col">
-                    <span class="text-xs text-brand-green font-bold tracking-widest leading-none">障がい者グループホーム</span>
-                    <span class="text-3xl font-black text-brand-text tracking-wider mt-1.5">いやしのおうち</span>
+                    <span class="text-xs text-brand-green font-black tracking-widest leading-none">女性専用グループホーム</span>
+                    <span class="brand-title text-4xl text-brand-text mt-1.5">いやしのおうち</span>
                 </div>
             </a>
 
@@ -190,7 +203,7 @@
                 <div class="lg:col-span-6 space-y-10">
                     <div class="inline-flex items-center gap-2.5 bg-brand-green-bg text-brand-green font-black text-base px-5 py-2.5 rounded-full border border-brand-green/20">
                         <span class="w-3.5 h-3.5 rounded-full bg-brand-green-light animate-ping"></span>
-                        障がい者グループホーム
+                        女性専用グループホーム
                     </div>
                     
                     <h1 class="text-5xl sm:text-6xl lg:text-6.5xl font-black text-brand-text leading-[1.3] tracking-wider">
@@ -205,7 +218,7 @@
                     </h1>
 
                     <p class="text-xl sm:text-2xl text-brand-text/90 leading-loose max-w-xl font-medium">
-                        木のぬくもりと、どこまでも広がる青空のような心地よさに包まれて、自分らしく暮らす。いやしのおうちは、お一人おひとりのステップに寄り添う温かなホームです。
+                        一人ひとりの「自分らしい暮らし」を、専門性とやさしさで支えます。いやしのおうちは、大阪府大東市の共同生活援助（女性専用・定員4名）。2026年10月開設予定です。
                     </p>
 
                     <!-- CTAs (Enlarged Buttons) -->
@@ -512,8 +525,9 @@
             <!-- Double Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
                 
-                <!-- Left: Target Audience (Sora no Ie Style checklist) -->
-                <div class="lg:col-span-5 bg-brand-sky-light/80 p-10 rounded-[2.5rem] border-2 border-brand-sky/40 relative">
+                <!-- Left: Target Audience + 事業所情報 -->
+                <div class="lg:col-span-5 space-y-8">
+                <div class="bg-brand-sky-light/80 p-10 rounded-[2.5rem] border-2 border-brand-sky/40 relative">
                     <div class="absolute -top-8 -right-8 text-brand-sky opacity-80 float-sketch">
                         <!-- 手描きのくもSVG -->
                         <svg class="w-20 h-16" viewBox="0 0 100 60" fill="currentColor">
@@ -528,11 +542,11 @@
                     <ul class="space-y-6 font-black text-brand-text/90 text-lg sm:text-xl">
                         <li class="flex items-start gap-4">
                             <span class="text-brand-green mt-1 text-2xl">✔</span>
-                            <span>18歳以上で知的障がい、精神障がい、または身体障がい等の区分認定を受けている方</span>
+                            <span>18歳以上の女性で、知的・精神・身体障がい等の障害支援区分認定を受けている方</span>
                         </li>
                         <li class="flex items-start gap-4">
                             <span class="text-brand-green mt-1 text-2xl">✔</span>
-                            <span>共同生活援助（グループホーム）の支給決定を受けられる方</span>
+                            <span>共同生活援助（女性専用）／定員4名</span>
                         </li>
                         <li class="flex items-start gap-4">
                             <span class="text-brand-green mt-1 text-2xl">✔</span>
@@ -548,6 +562,19 @@
                         ※上記に該当するか分からない場合や、区分認定の申請中の方も、まずは一度お気軽にご相談ください。スタッフが申請サポート等も併せてご案内いたします。
                     </div>
                 </div>
+                <div class="bg-white p-10 rounded-[2.5rem] border border-[#ECE5DA]">
+                    <h3 class="text-2xl font-black text-brand-text mb-4">事業所情報</h3>
+                    <ul class="space-y-3 text-base sm:text-lg font-bold text-brand-text/90">
+                        <li>事業所名：いやしのおうち</li>
+                        <li>種別：共同生活援助（女性専用）</li>
+                        <li>所在地：〒574-0011 大阪府大東市北条5-8-31</li>
+                        <li>定員：4名（女性専用）</li>
+                        <li>開設予定：2026年10月</li>
+                        <li>運営：株式会社 癒し家</li>
+                        <li>代表：加賀谷 徹（臨床心理士）</li>
+                    </ul>
+                </div>
+                </div>
 
                 <!-- Right: Costs and Live Simulator -->
                 <div class="lg:col-span-7 space-y-8">
@@ -558,49 +585,66 @@
                         
                         <div class="space-y-5 mb-8 text-lg sm:text-xl">
                             <div class="flex justify-between items-center py-3 border-b border-dashed border-[#DCD3C5]">
-                                <span class="font-black">家賃（特定障がい者特別給付費 適用前）</span>
-                                <span class="font-black text-2xl text-brand-text">40,000円</span>
+                                <span class="font-black">家賃</span>
+                                <span class="font-black text-2xl text-brand-text">39,000円〜</span>
+                            </div>
+                            <div class="flex justify-between items-baseline py-3 border-b border-dashed border-[#DCD3C5]">
+                                <span class="font-black">食費（朝食）<span class="block text-sm font-medium text-brand-text/60">230円 × 30食</span></span>
+                                <span class="font-black text-2xl text-brand-text">6,900円</span>
+                            </div>
+                            <div class="flex justify-between items-baseline py-3 border-b border-dashed border-[#DCD3C5]">
+                                <span class="font-black">食費（昼食）<span class="block text-sm font-medium text-brand-text/60">460円 × 30食・任意</span></span>
+                                <span class="font-black text-2xl text-brand-text">13,800円</span>
+                            </div>
+                            <div class="flex justify-between items-baseline py-3 border-b border-dashed border-[#DCD3C5]">
+                                <span class="font-black">食費（夕食）<span class="block text-sm font-medium text-brand-text/60">460円 × 30食</span></span>
+                                <span class="font-black text-2xl text-brand-text">13,800円</span>
                             </div>
                             <div class="flex justify-between items-center py-3 border-b border-dashed border-[#DCD3C5]">
-                                <span class="font-black flex items-center gap-2">食材料費 <span class="text-sm font-normal text-brand-text/70">(朝食・夕食)</span></span>
-                                <span class="font-black text-2xl text-brand-text">22,500円</span>
+                                <span class="font-black">光熱費</span>
+                                <span class="font-black text-2xl text-brand-text">15,000円</span>
                             </div>
                             <div class="flex justify-between items-center py-3 border-b border-dashed border-[#DCD3C5]">
-                                <span class="font-black">光熱水費</span>
-                                <span class="font-black text-2xl text-brand-text">13,000円</span>
+                                <span class="font-black">日用品費</span>
+                                <span class="font-black text-2xl text-brand-text">5,000円〜</span>
                             </div>
                             <div class="flex justify-between items-center py-3 border-b border-dashed border-[#DCD3C5]">
-                                <span class="font-black">日用品費・その他</span>
-                                <span class="font-black text-2xl text-brand-text">3,500円</span>
+                                <span class="font-black">敷金</span>
+                                <span class="font-black text-2xl text-brand-text">0円</span>
                             </div>
-                            <div class="flex justify-between items-center py-3 border-b border-dashed border-[#DCD3C5]">
-                                <span class="font-black">修繕積立金</span>
-                                <span class="font-black text-2xl text-brand-text">3,000円</span>
+                            <div class="flex justify-between items-center py-3">
+                                <span class="font-black text-brand-green">家賃補助</span>
+                                <span class="font-black text-2xl text-brand-green">−10,000円</span>
                             </div>
                         </div>
+                        <p class="text-sm font-medium text-brand-text/70 mb-8">家賃補助適用後の目安合計は <span class="font-black text-brand-text">70,130円〜</span>（昼食なし）。部屋や実費により前後します。</p>
 
                         <!-- インタラクティブ・シミュレーター -->
                         <div class="bg-white p-8 rounded-3xl border-2 border-brand-green/30 space-y-6">
                             <p class="font-black text-base sm:text-lg text-brand-green flex items-center gap-2">
                                 <span class="inline-block w-3.5 h-3.5 rounded-full bg-brand-green"></span>
-                                給給付金適用後の「実際の自己負担」シミュレーション
+                                家賃補助適用後の「自己負担額」シミュレーション
                             </p>
                             
                             <div class="space-y-3">
-                                <label class="block text-sm font-black text-brand-text/80">家賃国庫補助（特定障害者特別給付費）の有無を選択</label>
+                                <label class="block text-sm font-black text-brand-text/80">家賃補助の有無を選択</label>
                                 <select id="subsidy-select" class="w-full p-4 bg-brand-beige border border-[#DCD3C5] rounded-xl font-black text-base text-brand-text focus:outline-brand-green">
                                     <option value="10000">受給あり（家賃1万円引きが適用されます）</option>
                                     <option value="0">受給なし（一般枠・補助なし）</option>
                                 </select>
                             </div>
+                            <label class="flex items-center gap-3 font-black text-brand-text cursor-pointer">
+                                <input id="lunch-check" type="checkbox" class="w-5 h-5 accent-[#5B8C5A]">
+                                昼食を含める（月額 +13,800円）
+                            </label>
 
                             <div class="bg-brand-green-bg/60 p-6 rounded-xl flex items-center justify-between">
                                 <div class="text-left">
-                                    <p class="text-sm font-black text-brand-text/70">給付金適用後のお支払い実質合計</p>
+                                    <p class="text-sm font-black text-brand-text/70">1ヶ月の目安実質負担額</p>
                                     <p class="text-xs text-brand-green font-black mt-0.5">※家賃補助を引いた実質的な負担額です</p>
                                 </div>
                                 <div class="text-right flex items-baseline">
-                                    <span id="total-price" class="text-4xl sm:text-5xl font-black text-brand-green">72,000</span>
+                                    <span id="total-price" class="text-4xl sm:text-5xl font-black text-brand-green">70,130</span>
                                     <span class="text-sm font-black text-brand-text ml-1.5">円/月</span>
                                 </div>
                             </div>
@@ -654,7 +698,7 @@
             </div>
 
             <!-- Daily Flow Steps (4つのステップをかわいい手書き2Dイラストで配置) -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 relative">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 relative">
                 
                 <div class="absolute top-1/4 left-[12%] right-[12%] h-0.5 border-t-2 border-dashed border-brand-green/35 hidden md:block z-0"></div>
 
@@ -734,8 +778,23 @@
                         </svg>
                     </div>
                     <h3 class="font-black text-2xl text-brand-text mb-2">夜の時間</h3>
-                    <p class="text-sm sm:text-base text-brand-green font-bold mb-4">夕食・団らん・就寝準備</p>
-                    <p class="text-sm sm:text-base text-brand-text/80 leading-relaxed font-semibold">全員で手作りの夜ご飯。談話室でテレビを見たり過ごした後は、個室で就寝。</p>
+                    <p class="text-sm sm:text-base text-brand-green font-bold mb-4">夕食・団らん</p>
+                    <p class="text-sm sm:text-base text-brand-text/80 leading-relaxed font-semibold">手作りの夕食を囲み、スタッフや仲間とゆるやかに過ごします。</p>
+                </div>
+
+                <!-- Step 5: 就寝 -->
+                <div class="relative bg-white p-8 rounded-3xl border border-[#ECE5DA] text-center flex flex-col items-center z-10 handwritten-border hover:shadow-md transition">
+                    <span class="absolute -top-5 bg-brand-green text-white text-sm font-black px-5 py-2 rounded-full shadow-sm">PM 21:00 〜</span>
+                    <div class="w-24 h-24 bg-brand-green-bg rounded-full flex items-center justify-center my-6 relative">
+                        <svg class="w-16 h-16 relative z-10" viewBox="0 0 64 64" fill="none">
+                            <path d="M20 44 C20 26, 32 14, 46 14 C36 18, 30 30, 34 44 C38 48, 44 48, 46 48 C32 52, 20 52, 20 44 Z" fill="#FDF3CD" />
+                            <path d="M20 44 C20 26, 32 14, 46 14 C34 18, 30 30, 34 44 C32 48, 20 48, 20 44 Z" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M24 32 Q27 35 30 32" stroke="#4A3B32" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="font-black text-2xl text-brand-text mb-2">就寝・見守り</h3>
+                    <p class="text-sm sm:text-base text-brand-green font-bold mb-4">夜間も職員が配置</p>
+                    <p class="text-sm sm:text-base text-brand-text/80 leading-relaxed font-semibold">夜間も職員が配置され、巡回と緊急時の対応を行います。</p>
                 </div>
 
             </div>
@@ -835,7 +894,7 @@
                             </div>
                             <div class="text-center sm:text-right text-sm font-black text-brand-text/70 mt-1 sm:mt-0 leading-relaxed">
                                 <p>受付 9:00〜18:00</p>
-                                <p class="text-xs text-brand-green">(年中無休)</p>
+                                <p class="text-xs text-brand-green">(土日祝も可)</p>
                             </div>
                         </div>
 
@@ -871,8 +930,8 @@
                             <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                         </svg>
                         <div class="flex flex-col">
-                            <span class="text-xs text-brand-green-light font-black leading-none">障がい者グループホーム</span>
-                            <span class="text-2xl font-black mt-1">いやしのおうち</span>
+                            <span class="text-xs text-brand-green-light font-black leading-none">女性専用グループホーム</span>
+                            <span class="brand-title text-3xl mt-1">いやしのおうち</span>
                         </div>
                     </div>
                     
@@ -883,6 +942,14 @@
                     <div class="text-sm text-white/80 space-y-2 pt-2">
                         <p class="font-black text-base text-brand-green-light">📍 所在地</p>
                         <p class="font-bold text-lg">〒574-0011 大阪府大東市北条5-8-31</p>
+                        <p class="font-bold">
+                            <a href="tel:08066192027" class="hover:text-white transition">TEL 080-6619-2027</a><br>
+                            <span class="text-sm font-medium text-white/70">受付 9:00〜18:00（土日祝も可）</span>
+                        </p>
+                        <p class="font-bold">
+                            <a href="mailto:iyashiya.a1@gmail.com" class="hover:text-white transition">iyashiya.a1@gmail.com</a>
+                        </p>
+                        <p class="font-medium leading-relaxed text-white/80">運営：株式会社 癒し家／代表：加賀谷 徹（臨床心理士）<br>本店：大阪府大阪市天王寺区上汐3丁目6-14-505C<br>開設予定：2026年10月</p>
                     </div>
                 </div>
 
@@ -900,16 +967,11 @@
                     </div>
 
                     <div class="space-y-4">
-                        <p class="font-black text-brand-green-light border-l-2 border-brand-green-light pl-2 text-lg">SNS公式アカウント</p>
-                        <div class="flex items-center gap-3">
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-white/10 hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] rounded-full flex items-center justify-center transition group" aria-label="Instagram">
-                                <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                                </svg>
-                            </a>
-                        </div>
+                        <p class="font-black text-brand-green-light border-l-2 border-brand-green-light pl-2 text-lg">運営</p>
+                        <ul class="space-y-3 text-white/80 font-normal">
+                            <li>株式会社 癒し家</li>
+                            <li>共同生活援助（女性専用）／定員4名</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -917,8 +979,7 @@
 
             <!-- Bottom Copyright -->
             <div class="pt-8 text-center text-xs text-white/50 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p>© 2026 Iyashi no Ouchi All Rights Reserved.</p>
-                <p class="font-light">Designed with Warmth & Sky 🏡🌤</p>
+                <p>© 2026 株式会社癒し家 いやしのおうち All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -958,19 +1019,24 @@
         const subsidySelect = document.getElementById('subsidy-select');
         const totalPriceEl = document.getElementById('total-price');
 
-        const BASE_ADDITIONAL_COST = 42000;
-        const RENT_PRICE = 40000;
+        const lunchCheck = document.getElementById('lunch-check');
+        // チラシ合計 70,130円（家賃補助あり・昼食なし）に合わせる
+        const BASE_COST = 41130;
+        const RENT_PRICE = 39000;
+        const LUNCH = 13800;
 
         function updateSimulation() {
+            if (!subsidySelect || !totalPriceEl) return;
             const subsidy = parseInt(subsidySelect.value, 10);
-            const actualRent = Math.max(0, RENT_PRICE - subsidy);
-            const total = actualRent + BASE_ADDITIONAL_COST;
-            
-            totalPriceEl.textContent = total.toLocaleString();
+            const lunch = lunchCheck && lunchCheck.checked ? LUNCH : 0;
+            totalPriceEl.textContent = (Math.max(0, RENT_PRICE - subsidy) + BASE_COST + lunch).toLocaleString();
         }
 
-        subsidySelect.addEventListener('change', updateSimulation);
-        updateSimulation();
+        if (subsidySelect) {
+            subsidySelect.addEventListener('change', updateSimulation);
+            if (lunchCheck) lunchCheck.addEventListener('change', updateSimulation);
+            updateSimulation();
+        }
     </script>
 </body>
 </html>

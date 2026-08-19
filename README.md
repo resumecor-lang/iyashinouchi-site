@@ -1,6 +1,9 @@
 # いやしのおうち 公式サイト
 
-障がい者グループホーム「いやしのおうち」の公式ウェブサイトです。
+大阪府大東市の女性専用グループホーム「いやしのおうち」の公式ウェブサイトです。
+
+- 作業フォルダ: `etc/iyashinouchi-site/`
+- GitHub: https://github.com/resumecor-lang/iyashinouchi-site
 
 ## ファイル構成
 
@@ -18,47 +21,37 @@ iyashinouchi-site/
 └── README.md         … このファイル
 ```
 
-## 編集が必要な箇所
+## 反映済み（チラシ確定情報）
 
-### 全ページ共通
-- `XXX-XXXX-XXXX` … 電話番号に置き換え
-- `〒XXX-XXXX 大阪府○○市○○町X-X-X` … 実際の住所
-- `0000000000` … 電話番号のtel:リンク（ハイフンなし）
-- LINEボタンの `href="#"` … LINE友だち追加URL
+- 事業所: いやしのおうち／共同生活援助（女性専用）／定員4名
+- 所在地: 〒574-0011 大阪府大東市北条5-8-31
+- 最寄り: JR学研都市線「四条畷駅」徒歩約13分（「野崎駅」徒歩約23分）
+- TEL: 080-6619-2027（受付 9:00〜18:00／土日祝も可）
+- メール: iyashiya.a1@gmail.com
+- 開設予定: 2026年10月
+- 運営: 株式会社 癒し家（代表：加賀谷 徹／臨床心理士）
+- 実費目安: 家賃 39,000円〜、昼食任意、敷金0円、家賃補助 −10,000円、合計目安 70,130円〜（昼食なし）
 
-### TOPページ (index.html)
-- メインビジュアル画像
-- 特徴アイコン
+## まだ手元の情報が必要な箇所
 
-### ホームのご案内 (about.html)
-- 施設写真6枚
-- 基本情報テーブル（所在地・最寄り駅・定員等）
-
-### ご入居・費用 (use.html)
-- 実費負担金額（家賃・食費・光熱水費）
-
-### 採用情報 (recruit.html)
-- 給与額
-
-### お問い合わせ (contact.html)
-- `https://formspree.io/f/YOUR_FORM_ID` … Formspreeで取得したフォームURL
-- Googleマップ埋め込みコード
+- `contact.html` の `YOUR_FORM_ID` … Formspree で発行したURL
+- LINE友だち追加URL
+- 施設写真（`about.html` はプレースホルダのまま）
+- 採用の給与額（いまは「お問い合わせください」）
 
 ## フォームの設定方法（Formspree）
 
-無料のフォームサービス「Formspree」を使ってお問い合わせを受け取れます。
-
 1. https://formspree.io にアクセスして登録
-2. 新しいフォームを作成して、受信用メールアドレスを設定
+2. 新しいフォームを作成し、受信用メール（iyashiya.a1@gmail.com）を設定
 3. 発行されたURL（例：`https://formspree.io/f/abc123xyz`）をコピー
 4. `contact.html` の `YOUR_FORM_ID` 部分を置き換える
 
 ## GitHub Pagesでの公開方法
 
-1. GitHubでリポジトリを作成
-2. このフォルダの全ファイルをアップロード
-3. Settings → Pages → Source を main ブランチに設定
-4. 数分後に `https://[ユーザー名].github.io/[リポジトリ名]/` で公開
+1. https://github.com/resumecor-lang/iyashinouchi-site/settings/pages を開く
+2. Source で **Deploy from a branch** を選ぶ
+3. Branch を `main`、フォルダを `/ (root)` にして Save
+4. 数分後に `https://resumecor-lang.github.io/iyashinouchi-site/` で公開
 
 ## ローカルでの確認方法
 

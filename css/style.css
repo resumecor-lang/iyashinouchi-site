@@ -1,8 +1,9 @@
 /* ========================================
    いやしのおうち｜共通スタイル
    配色：エメラルド + ゴールド
-   フォント：Noto Serif JP + Noto Sans JP
+   フォント：見出しは Zen Maru Gothic 900
 ======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700;900&display=swap');
 
 /* リセット */
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,16 +35,18 @@ ul, ol { list-style: none; }
 }
 .header-logo {
   color: #fff;
-  font-family: 'Yomogi', cursive;
-  font-size: 18px;
-  font-weight: 500;
+  font-family: 'Zen Maru Gothic', 'Yomogi', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  -webkit-text-stroke: 0.4px currentColor;
 }
 .header-logo .sub {
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 700;
   opacity: 0.85;
   margin-left: 8px;
-  font-family: 'Klee One', cursive;
+  font-family: 'Zen Maru Gothic', 'Klee One', sans-serif;
 }
 .header-nav {
   display: flex;
@@ -52,7 +55,8 @@ ul, ol { list-style: none; }
 }
 .header-nav a {
   color: #CDEAE0;
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 700;
   transition: color 0.2s;
 }
 .header-nav a:hover { color: #F2D49C; }
@@ -61,7 +65,7 @@ ul, ol { list-style: none; }
   color: #FAEEDA;
   padding: 8px 18px;
   border-radius: 20px;
-  font-weight: 500;
+  font-weight: 900;
 }
 .hamburger { display: none; background: none; border: none; color: #fff; cursor: pointer; font-size: 24px; }
 
@@ -73,12 +77,14 @@ ul, ol { list-style: none; }
 .section-narrow { padding: 60px 0; }
 
 h1, h2, h3 {
-  font-family: 'Yomogi', cursive;
-  font-weight: 500;
+  font-family: 'Zen Maru Gothic', 'Yomogi', sans-serif;
+  font-weight: 900;
   color: #6FB89C;
   line-height: 1.4;
+  letter-spacing: 0.05em;
+  -webkit-text-stroke: 0.55px currentColor;
 }
-h1 { font-size: 46px; margin-bottom: 16px; }
+h1 { font-size: 46px; margin-bottom: 16px; -webkit-text-stroke: 0.8px currentColor; }
 h2 { font-size: 36px; margin-bottom: 24px; }
 h3 { font-size: 26px; margin-bottom: 12px; }
 p { margin-bottom: 16px; }
@@ -97,7 +103,7 @@ p { margin-bottom: 16px; }
   padding: 14px 32px;
   border-radius: 24px;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 900;
   text-align: center;
   transition: all 0.2s;
   cursor: pointer;
@@ -244,7 +250,7 @@ p { margin-bottom: 16px; }
   padding: 60px 32px;
   text-align: center;
 }
-.page-hero h1 { font-size: 32px; margin-bottom: 12px; }
+.page-hero h1 { font-size: 38px; margin-bottom: 12px; font-weight: 900; }
 .page-hero .lead { max-width: 700px; margin: 0 auto; }
 
 /* ========================================
@@ -384,8 +390,9 @@ p { margin-bottom: 16px; }
 }
 .cta-section h2 {
   color: #fff;
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 32px;
+  font-weight: 900;
 }
 .cta-channels {
   display: grid;
@@ -414,8 +421,8 @@ p { margin-bottom: 16px; }
   margin-bottom: 4px;
 }
 .cta-channel .value {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 900;
   color: #F2D49C;
 }
 
@@ -466,7 +473,7 @@ p { margin-bottom: 16px; }
   margin-top: 4px;
 }
 .timeline-item:last-child .timeline-line { display: none; }
-.timeline-content h3 { font-size: 15px; margin-bottom: 4px; color: #6FB89C; font-family: 'Klee One', cursive; font-weight: 500; }
+.timeline-content h3 { font-size: 18px; margin-bottom: 4px; color: #6FB89C; font-family: 'Zen Maru Gothic', sans-serif; font-weight: 900; }
 .timeline-content p { font-size: 13px; color: #5F5E5A; line-height: 1.6; margin: 0; }
 
 /* ========================================
