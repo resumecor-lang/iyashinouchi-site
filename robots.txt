@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://resumecor-lang.github.io/iyashinouchi-site/sitemap.xml
