@@ -34,17 +34,15 @@ iyashinouchi-site/
 
 ## まだ手元の情報が必要な箇所
 
-- `contact.html` の `YOUR_FORM_ID` … Formspree で発行したURL
 - LINE友だち追加URL
 - 施設写真（`about.html` はプレースホルダのまま）
 - 採用の給与額（いまは「お問い合わせください」）
 
-## フォームの設定方法（Formspree）
+## フォーム（Formspree）
 
-1. https://formspree.io にアクセスして登録
-2. 新しいフォームを作成し、受信用メール（iyashiya.a1@gmail.com）を設定
-3. 発行されたURL（例：`https://formspree.io/f/abc123xyz`）をコピー
-4. `contact.html` の `YOUR_FORM_ID` 部分を置き換える
+- 送信先: `https://formspree.io/f/xzepkwvy`
+- 受信: `iyashiya.a1@gmail.com`
+- 初回送信時、Formspree から確認メールが届くことがある。届いたら承認する
 
 ## GitHub Pagesでの公開方法
 
