@@ -38,6 +38,21 @@ iyashinouchi-site/
 - 施設写真（`about.html` はプレースホルダのまま）
 - 採用の給与額（いまは「お問い合わせください」）
 
+## Google検索に出す方法
+
+サイト側の準備（`robots.txt` / `sitemap.xml` / 検索用メタ）は済みです。Googleに登録するには次を1回だけ行います。
+
+1. https://search.google.com/search-console を開く
+2. 「プロパティを追加」→ URLプレフィックスに  
+   `https://resumecor-lang.github.io/iyashinouchi-site/`
+3. 所有権の確認（HTMLタグ方式なら、発行された meta を渡してもらえればこちらで入れます）
+4. 左メニュー「サイトマップ」に  
+   `https://resumecor-lang.github.io/iyashinouchi-site/sitemap.xml`  
+   を送信
+5. 「URL検査」でトップURLを入れ、「インデックス登録をリクエスト」
+
+反映まで数日かかることがあります。
+
 ## フォーム（Formspree）
 
 - 送信先: `https://formspree.io/f/xzepkwvy`
