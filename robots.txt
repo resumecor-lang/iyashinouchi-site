@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /docs/
 
 Sitemap: https://resumecor-lang.github.io/iyashinouchi-site/sitemap.xml
