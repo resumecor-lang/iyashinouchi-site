@@ -1,0 +1,12 @@
+{
+  "name": "iyashinouchi-site",
+  "terminals": [
+    {
+      "name": "web",
+      "command": "python3 -m http.server 8000"
+    }
+  ],
+  "ports": [
+    8000
+  ]
+}
