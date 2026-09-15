@@ -1,6 +1,6 @@
 # いやしのおうち HP｜引き継ぎ（HANDOFF）
 
-**最終更新**：2026-08-22 13:22  
+**最終更新**：2026-09-15  
 **ユーザー**：Resume（加賀谷徹）  
 **目的**：女性専用グループホーム「いやしのおうち」公式HPの更新と公開
 
@@ -17,7 +17,7 @@ etc/iyashinouchi-site/CLAUDE_HANDOFF.md を読んで、次の一手だけ進め�
 
 ## いまの位置
 
-**公式HPは公開済み。** チラシ確定情報・定員4名・見出しの太さまで GitHub に送済み。
+**公式HPは公開済み。Google 検索登録は 2026-09-15 にユーザーが完了。** チラシ確定情報・定員4名・見出しの太さまで GitHub に送済み。検索結果に出るまで数日かかることがある（Search Console の画面はエージェントからは見られない）。
 
 | 項目 | 状態 |
 |---|---|
@@ -25,7 +25,9 @@ etc/iyashinouchi-site/CLAUDE_HANDOFF.md を読んで、次の一手だけ進め�
 | 公開URL | https://resumecor-lang.github.io/iyashinouchi-site/ |
 | 作業フォルダ（正本） | `etc/iyashinouchi-site/` |
 | Jekyll試作 | `etc/iyashi-no-ouchi/`（GitHubに上げない） |
-| 最終push | `d502e1b`（お問い合わせフォームを公開） |
+| Google検索登録 | **済み**（Resume 2026-09-15。所有権確認・sitemap・インデックスリクエスト） |
+| キャラクターロゴ | **済み**（ヘッダーとフッターの2か所。`images/logo-capybara.png`） |
+| 最終push | `0f3ea94`（Search Console 用 meta） |
 
 ユーザーが「続きをやって」と言ったら、下の「次にやること」の**先頭1件だけ**進める。
 
@@ -59,13 +61,13 @@ etc/iyashinouchi-site/CLAUDE_HANDOFF.md を読んで、次の一手だけ進め�
 
 ## 次にやること（優先順・1回1件）
 
-1. **Google検索登録** … Search Console でサイト所有権確認＋sitemap送信＋インデックス登録リクエスト（ユーザー作業。手順は README）
-2. **施設写真** … `about.html` はプレースホルダのまま。写真をもらったら `images/` へ
-3. **LINE URL** … 友だち追加URLが来たら差し替え（いまはメールにしている）
-4. **採用の給与** … 金額が来たら `recruit.html` の「お問い合わせください」を置き換え
-5. 不要ファイル `index.html.html` の削除は、確認してから
-6. **お問い合わせフォーム** … 済み（`https://formspree.io/f/xzepkwvy`）。公開済み `d502e1b`
-7. **検索向けファイル** … `robots.txt` / `sitemap.xml` / TOPのメタ・構造化データ 済み（このセッション）
+1. **施設写真** … `about.html` はプレースホルダのまま。写真をもらったら `images/` へ（共用リビング・個室・浴室・食堂・周辺環境）
+2. **LINE URL** … 友だち追加URLが来たら差し替え（いまはメールにしている）
+3. **採用の給与** … 金額が来たら `recruit.html` の「お問い合わせください」を置き換え
+4. 不要ファイル `index.html.html` の削除は、確認してから
+5. **お問い合わせフォーム** … 済み（`https://formspree.io/f/xzepkwvy`）。公開済み `d502e1b`
+6. **検索向けファイル** … `robots.txt` / `sitemap.xml` / TOPのメタ・構造化データ 済み
+7. **Google検索登録** … 済み（Resume 2026-09-15）。手順の控えは README と `routing/Google検索登録_視覚ガイド.html`
 
 GitHub へ送るときはユーザーが「GitHubに上げて」と言ってから。対象は `etc/iyashinouchi-site/` のみ。検索ヒット目的でSEOを直した直後は、公開のため push してよい。
 

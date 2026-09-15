@@ -38,20 +38,20 @@ iyashinouchi-site/
 - 施設写真（`about.html` はプレースホルダのまま）
 - 採用の給与額（いまは「お問い合わせください」）
 
+キャラクターロゴは TOP（`index.html`）のヘッダーとフッターに入れ済み（`images/logo-capybara.png`）。
+
 ## Google検索に出す方法
 
-サイト側の準備（`robots.txt` / `sitemap.xml` / 検索用メタ）は済みです。Googleに登録するには次を1回だけ行います。
+**済み（Resume 2026-09-15）。** サイト側の準備（`robots.txt` / `sitemap.xml` / 検索用メタ）と Search Console の登録（所有権確認・sitemap・インデックスリクエスト）は終わっています。Google の検索結果に出るまで数日かかることがあります。
+
+あとから手順を見直すときは:
 
 1. https://search.google.com/search-console を開く
-2. 「プロパティを追加」→ URLプレフィックスに  
+2. URLプレフィックス  
    `https://resumecor-lang.github.io/iyashinouchi-site/`
-3. 所有権の確認（HTMLタグ方式なら、発行された meta を渡してもらえればこちらで入れます）
-4. 左メニュー「サイトマップ」に  
-   `https://resumecor-lang.github.io/iyashinouchi-site/sitemap.xml`  
-   を送信
-5. 「URL検査」でトップURLを入れ、「インデックス登録をリクエスト」
-
-反映まで数日かかることがあります。
+3. 所有権は HTMLタグ（サイトに meta 済み）
+4. サイトマップは `sitemap.xml`
+5. URL検査でトップを「インデックス登録をリクエスト」
 
 ## フォーム（Formspree）
 
