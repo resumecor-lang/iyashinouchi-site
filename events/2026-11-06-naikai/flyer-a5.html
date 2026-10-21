@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>いやしのおうち 内覧会フライヤー（A5両面）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#6FB89C; --green-deep:#3C8B72; --green-soft:#CDEAE0; --green-pale:#EBF6F1;
+    --bg:#F8F6F1; --ink:#444441; --ink-soft:#6b6b66;
+    --gold:#B58A3C; --gold-soft:#E3C883; --gold-pale:#F2D49C; --gold-ink:#5A3D0E; --cream:#FAF7F0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{background:#e9e9e4;}
+  body{font-family:'Klee One','Zen Maru Gothic',serif;color:var(--ink);line-height:1.7;}
+  @page{size:A5;margin:0;}
+  .page{position:relative;width:148mm;height:210mm;margin:0 auto;background:var(--cream);overflow:hidden;}
+  .page.front{page-break-after:always;}
+  h1,h2,h3,.zen{font-family:'Zen Maru Gothic',sans-serif;}
+
+  /* ===================== 表面 ===================== */
+  .front{display:flex;flex-direction:column;}
+  .ribbon{
+    background:linear-gradient(100deg,var(--green-deep),var(--green));color:#fff;
+    text-align:center;padding:5mm 0 4mm;position:relative;
+  }
+  .ribbon .en{font-size:10pt;letter-spacing:.5em;opacity:.9;font-weight:500;}
+  .ribbon .jp{font-family:'Zen Maru Gothic';font-weight:900;font-size:26pt;letter-spacing:.3em;
+    -webkit-text-stroke:.4px #fff;margin-top:1mm;}
+  .ribbon::after{content:"";position:absolute;left:0;right:0;bottom:-3mm;height:3mm;
+    background:repeating-linear-gradient(90deg,var(--gold) 0 10mm,var(--gold-soft) 10mm 20mm);}
+
+  .datebox{margin:9mm auto 0;text-align:center;}
+  .datebox .lead{font-family:'Zen Maru Gothic';font-weight:700;color:var(--gold-ink);font-size:12pt;letter-spacing:.2em;}
+  .datebox .date{font-family:'Zen Maru Gothic';font-weight:900;color:var(--green-deep);
+    font-size:46pt;line-height:1.05;letter-spacing:.02em;-webkit-text-stroke:.5px currentColor;margin-top:1mm;}
+  .datebox .date .y{font-size:20pt;color:var(--gold);}
+  .datebox .date .dow{font-size:22pt;color:var(--gold-ink);}
+  .datebox .time{display:inline-block;margin-top:3mm;background:var(--green);color:#fff;
+    font-family:'Zen Maru Gothic';font-weight:700;font-size:12.5pt;letter-spacing:.1em;
+    padding:1.5mm 7mm;border-radius:24px;}
+
+  .hero{margin:7mm 12mm 0;border-radius:14px;overflow:hidden;box-shadow:0 2mm 5mm rgba(60,139,114,.18);}
+  .hero img{width:100%;display:block;}
+
+  .nameblock{text-align:center;margin-top:6mm;padding:0 10mm;}
+  .namebadge{display:inline-block;background:var(--gold-pale);color:var(--gold-ink);
+    font-family:'Zen Maru Gothic';font-weight:700;font-size:10pt;letter-spacing:.18em;
+    padding:.6mm 4mm;border-radius:14px;}
+  .namename{font-family:'Zen Maru Gothic';font-weight:900;color:var(--green-deep);
+    font-size:30pt;letter-spacing:.14em;margin-top:2mm;-webkit-text-stroke:.4px currentColor;}
+  .nametag{font-family:'Zen Maru Gothic';font-weight:700;color:var(--ink);font-size:11pt;letter-spacing:.1em;margin-top:1mm;}
+  .tagline{color:var(--green-deep);font-size:12pt;margin-top:3mm;letter-spacing:.06em;}
+
+  .front-foot{margin-top:auto;background:var(--green-pale);border-top:1.5px dashed var(--green-soft);
+    padding:4mm 10mm;display:flex;justify-content:center;gap:8mm;font-size:10.5pt;}
+  .front-foot .ff{display:flex;align-items:center;gap:2mm;}
+  .front-foot .pill{background:#fff;border:1.5px solid var(--green);color:var(--green-deep);
+    font-weight:700;border-radius:20px;padding:.6mm 4mm;font-family:'Zen Maru Gothic';}
+  .front-foot .place{color:var(--ink);}
+
+  /* ===================== 裏面 ===================== */
+  .back{padding:9mm 10mm 7mm;display:flex;flex-direction:column;}
+  .back-title{text-align:center;margin-bottom:5mm;}
+  .back-title .k{font-family:'Zen Maru Gothic';font-weight:900;color:var(--green-deep);font-size:19pt;letter-spacing:.1em;}
+  .back-title .s{font-size:9.5pt;color:var(--gold-ink);letter-spacing:.3em;}
+  .back-title .s::before,.back-title .s::after{content:"◇";color:var(--gold-soft);margin:0 .5em;}
+
+  .sec-label{font-family:'Zen Maru Gothic';font-weight:700;color:#fff;background:var(--green);
+    display:inline-block;font-size:10.5pt;letter-spacing:.12em;padding:.5mm 4mm;border-radius:4px 14px 14px 4px;margin-bottom:2.5mm;}
+
+  .features{display:grid;grid-template-columns:1fr 1fr;gap:3mm;margin-bottom:5mm;}
+  .feat{background:#fff;border:1px solid var(--green-soft);border-radius:10px;padding:3mm;display:flex;gap:2.5mm;align-items:flex-start;}
+  .feat .ic{flex:0 0 11mm;height:11mm;border-radius:8px;overflow:hidden;background:var(--green-pale);}
+  .feat .ic img{width:100%;height:100%;object-fit:cover;}
+  .feat .ft{font-family:'Zen Maru Gothic';font-weight:700;color:var(--green-deep);font-size:10.5pt;}
+  .feat .fb{font-size:9pt;color:var(--ink-soft);line-height:1.5;}
+
+  .flow{display:flex;justify-content:space-between;gap:1mm;background:#fff;border:1px solid var(--green-soft);
+    border-radius:10px;padding:3mm 2mm;margin-bottom:5mm;}
+  .flow .step{text-align:center;flex:1;position:relative;}
+  .flow .step .t{font-family:'Zen Maru Gothic';font-weight:900;color:var(--gold-ink);font-size:9.5pt;}
+  .flow .step .l{font-size:8pt;color:var(--ink-soft);}
+  .flow .step:not(:last-child)::after{content:"›";position:absolute;right:-1mm;top:2mm;color:var(--green);font-weight:700;}
+
+  .cols{display:flex;gap:4mm;margin-bottom:4mm;}
+  .cost{flex:1;background:var(--cream);border:1.5px solid var(--gold-soft);border-radius:10px;padding:3mm 3.5mm;}
+  .cost .big{font-family:'Zen Maru Gothic';font-weight:900;color:var(--gold-ink);font-size:17pt;}
+  .cost .big small{font-size:9pt;}
+  .cost .note{font-size:8.5pt;color:var(--ink-soft);}
+  .access{flex:1;display:flex;gap:3mm;align-items:center;}
+  .access .qr{flex:0 0 22mm;}
+  .access .qr img{width:22mm;height:22mm;display:block;border:1px solid var(--green-soft);border-radius:6px;background:#fff;padding:1mm;}
+  .access .qr .cap{font-size:7.5pt;text-align:center;color:var(--ink-soft);margin-top:.5mm;}
+  .access .at{font-size:9pt;line-height:1.6;}
+  .access .at b{color:var(--green-deep);font-family:'Zen Maru Gothic';}
+
+  .contact{margin-top:auto;background:linear-gradient(100deg,var(--green-deep),var(--green));color:#fff;
+    border-radius:12px;padding:4mm 5mm;display:flex;justify-content:space-between;align-items:center;}
+  .contact .cl .name{font-family:'Zen Maru Gothic';font-weight:900;font-size:13pt;letter-spacing:.08em;}
+  .contact .cl .run{font-size:8.5pt;opacity:.92;}
+  .contact .cr{text-align:right;font-size:9.5pt;line-height:1.7;}
+  .contact .cr .tel{font-family:'Zen Maru Gothic';font-weight:900;font-size:15pt;letter-spacing:.03em;}
+</style>
+</head>
+<body>
+
+  <!-- ============ 表面 ============ -->
+  <div class="page front">
+    <div class="ribbon">
+      <div class="en">OPEN&nbsp;HOUSE</div>
+      <div class="jp">内　覧　会</div>
+    </div>
+
+    <div class="datebox">
+      <div class="lead">開催日</div>
+      <div class="date"><span class="y">2026.</span>11.6<span class="dow">（金）</span></div>
+      <div class="time">10:00 〜 16:00 ／ 入場無料・予約不要</div>
+    </div>
+
+    <div class="hero"><img src="../../images/hero.svg" alt="あたたかな家の風景"></div>
+
+    <div class="nameblock">
+      <span class="namebadge">女性専用グループホーム・共同生活援助</span>
+      <div class="namename">いやしのおうち</div>
+      <div class="nametag">定員4名／2026年 大阪府大東市にオープン</div>
+      <div class="tagline">ほっとできる、もうひとつのうち。</div>
+    </div>
+
+    <div class="front-foot">
+      <div class="ff"><span class="pill">会場</span><span class="place">いやしのおうち（大東市北条5-8-31）</span></div>
+      <div class="ff"><span class="pill">最寄</span><span class="place">JR「四条畷駅」徒歩約13分</span></div>
+    </div>
+  </div>
+
+  <!-- ============ 裏面 ============ -->
+  <div class="page back">
+    <div class="back-title">
+      <div class="k">いやしのおうち の ご案内</div>
+      <div class="s">安心して、自分らしく暮らせる住まい</div>
+    </div>
+
+    <div><span class="sec-label">施設の特長</span></div>
+    <div class="features">
+      <div class="feat">
+        <div class="ic"><img src="../../images/room.svg" alt="お部屋"></div>
+        <div><div class="ft">ゆったり個室</div><div class="fb">プライバシーに配慮した、一人ひとりの個室。</div></div>
+      </div>
+      <div class="feat">
+        <div class="ic"><img src="../../images/kitchen.svg" alt="食事"></div>
+        <div><div class="ft">あたたかい食事</div><div class="fb">朝・夕の食事を用意。昼食は任意で選べます。</div></div>
+      </div>
+      <div class="feat">
+        <div class="ic"><img src="../../images/counseling.svg" alt="相談"></div>
+        <div><div class="ft">こころの相談</div><div class="fb">臨床心理士の代表が、暮らしと気持ちを支えます。</div></div>
+      </div>
+      <div class="feat">
+        <div class="ic"><img src="../../images/entrance.svg" alt="見守り"></div>
+        <div><div class="ft">夜間の見守り</div><div class="fb">就寝後も見守り、安心して過ごせる毎日を。</div></div>
+      </div>
+    </div>
+
+    <div><span class="sec-label">1日の流れ</span></div>
+    <div class="flow">
+      <div class="step"><div class="t">7:00</div><div class="l">朝食</div></div>
+      <div class="step"><div class="t">9:00</div><div class="l">日中活動</div></div>
+      <div class="step"><div class="t">16:00</div><div class="l">帰宅</div></div>
+      <div class="step"><div class="t">18:00</div><div class="l">夕食</div></div>
+      <div class="step"><div class="t">21:00</div><div class="l">就寝・見守り</div></div>
+    </div>
+
+    <div class="cols">
+      <div class="cost">
+        <div style="font-family:'Zen Maru Gothic';font-weight:700;color:var(--green-deep);font-size:9.5pt;">ご利用料金の目安</div>
+        <div class="big">70,130円〜<small>／月</small></div>
+        <div class="note">家賃補助適用後・昼食なしの目安。詳細は当日ご説明します。</div>
+      </div>
+      <div class="access">
+        <div class="qr">
+          <img src="qr-site.png" alt="公式サイトQRコード">
+          <div class="cap">公式サイト</div>
+        </div>
+        <div class="at">
+          <b>アクセス</b><br>
+          〒574-0011<br>大阪府大東市北条5-8-31<br>
+          JR学研都市線「四条畷駅」徒歩約13分
+        </div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="cl">
+        <div class="name">お問い合わせ・ご予約</div>
+        <div class="run">運営：株式会社 癒し家（代表 加賀谷 徹／臨床心理士）</div>
+      </div>
+      <div class="cr">
+        <div class="tel">080-6619-2027</div>
+        <div>受付 9:00〜18:00（土日祝可）<br>iyashiya.a1@gmail.com</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
