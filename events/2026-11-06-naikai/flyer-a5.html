@@ -32,25 +32,42 @@
   .ribbon::after{content:"";position:absolute;left:0;right:0;bottom:-3mm;height:3mm;
     background:repeating-linear-gradient(90deg,var(--gold) 0 10mm,var(--gold-soft) 10mm 20mm);}
 
-  .datebox{margin:9mm auto 0;text-align:center;}
+  .datebox{margin:4mm auto 0;text-align:center;}
   .datebox .lead{font-family:'Zen Maru Gothic';font-weight:700;color:var(--gold-ink);font-size:12pt;letter-spacing:.2em;}
   .datebox .date{font-family:'Zen Maru Gothic';font-weight:900;color:var(--green-deep);
-    font-size:46pt;line-height:1.05;letter-spacing:.02em;-webkit-text-stroke:.5px currentColor;margin-top:1mm;}
+    font-size:40pt;line-height:1.05;letter-spacing:.02em;-webkit-text-stroke:.5px currentColor;margin-top:1mm;}
   .datebox .date .y{font-size:20pt;color:var(--gold);}
   .datebox .date .dow{font-size:22pt;color:var(--gold-ink);}
   .datebox .time{display:inline-block;margin-top:3mm;background:var(--green);color:#fff;
     font-family:'Zen Maru Gothic';font-weight:700;font-size:12.5pt;letter-spacing:.1em;
     padding:1.5mm 7mm;border-radius:24px;}
 
-  .hero{margin:7mm 12mm 0;border-radius:14px;overflow:hidden;box-shadow:0 2mm 5mm rgba(60,139,114,.18);}
-  .hero img{width:100%;display:block;}
+  /* メインビジュアル：いやしまる */
+  .mascot{position:relative;margin:3mm 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .mascot .glow{position:absolute;bottom:4mm;left:50%;transform:translateX(-50%);width:62mm;height:20mm;z-index:0;
+    background:radial-gradient(ellipse at center,var(--green-pale) 0%,rgba(235,246,241,0) 72%);}
+  .mascot .ground{position:absolute;bottom:5mm;left:50%;transform:translateX(-50%);width:34mm;height:5mm;z-index:0;
+    background:radial-gradient(ellipse at center,rgba(60,139,114,.20) 0%,rgba(60,139,114,0) 72%);}
+  .mascot img{position:relative;z-index:1;height:54mm;width:auto;display:block;
+    filter:drop-shadow(0 1mm 1.5mm rgba(0,0,0,.07));}
+  .mascot .bubble{position:absolute;z-index:3;top:1mm;right:12mm;
+    background:#fff;border:1.8px solid var(--green);color:var(--green-deep);
+    font-family:'Zen Maru Gothic';font-weight:700;font-size:10.5pt;letter-spacing:.05em;line-height:1.35;
+    text-align:center;padding:1.8mm 4.5mm;border-radius:16px;box-shadow:0 1mm 2mm rgba(60,139,114,.15);}
+  .mascot .bubble::after{content:"";position:absolute;left:8mm;bottom:-3.2mm;
+    border-left:3mm solid transparent;border-right:0;border-top:3.4mm solid var(--green);}
+  .mascot .bubble::before{content:"";position:absolute;left:8.1mm;bottom:-2.2mm;z-index:1;
+    border-left:2.4mm solid transparent;border-right:0;border-top:2.7mm solid #fff;}
+  .mascot .cap{position:relative;z-index:2;margin-top:1.5mm;text-align:center;
+    font-family:'Zen Maru Gothic';font-weight:700;color:var(--gold-ink);font-size:9pt;letter-spacing:.14em;}
+  .mascot .cap b{color:var(--green-deep);font-size:11.5pt;letter-spacing:.1em;}
 
-  .nameblock{text-align:center;margin-top:6mm;padding:0 10mm;}
+  .nameblock{text-align:center;margin-top:4mm;padding:0 10mm;}
   .namebadge{display:inline-block;background:var(--gold-pale);color:var(--gold-ink);
     font-family:'Zen Maru Gothic';font-weight:700;font-size:10pt;letter-spacing:.18em;
     padding:.6mm 4mm;border-radius:14px;}
   .namename{font-family:'Zen Maru Gothic';font-weight:900;color:var(--green-deep);
-    font-size:30pt;letter-spacing:.14em;margin-top:2mm;-webkit-text-stroke:.4px currentColor;}
+    font-size:26pt;letter-spacing:.14em;margin-top:2mm;-webkit-text-stroke:.4px currentColor;}
   .nametag{font-family:'Zen Maru Gothic';font-weight:700;color:var(--ink);font-size:11pt;letter-spacing:.1em;margin-top:1mm;}
   .tagline{color:var(--green-deep);font-size:12pt;margin-top:3mm;letter-spacing:.06em;}
 
@@ -120,7 +137,13 @@
       <div class="time">10:00 〜 16:00 ／ 入場無料・予約不要</div>
     </div>
 
-    <div class="hero"><img src="../../images/hero.svg" alt="あたたかな家の風景"></div>
+    <div class="mascot">
+      <div class="glow"></div>
+      <div class="ground"></div>
+      <div class="bubble">内覧会で<br>おまちしています♪</div>
+      <img src="../../images/iyashimaru.png" alt="いやしのおうち 公式キャラクター いやしまる">
+      <div class="cap">ご案内役 <b>いやしまる</b></div>
+    </div>
 
     <div class="nameblock">
       <span class="namebadge">女性専用グループホーム・共同生活援助</span>
